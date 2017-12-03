@@ -1,0 +1,357 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="" data-desktopBrowser="true">
+<head>
+  <meta charset="UTF-8"/>
+  <title>草根医生</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="description" content="HomeTouch offers a wide variety of vetted private carers, that can be booked online. Find, interview, and book home carers or live-in-carers across the UK">
+
+  <link rel="canonical" href="https://www.myhometouch.com/"/>
+
+
+
+  <meta name="og:title" content="Private Home Care: Find &amp; Book Carers in the UK | HomeTouch">
+  <meta name="og:description" content="HomeTouch offers a wide variety of vetted private carers, that can be booked online. Find, interview, and book home carers or live-in-carers across the UK">
+  <meta name="og:type" content="website"/>
+  <meta name="og:url" content="https://www.myhometouch.com/">
+  <meta name="og:image" content="./public/images/social-preview.jpg">
+  <meta name="og:site_name" content="HomeTouch">
+  <meta name="og:brand" content="HomeTouch">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@myhometouch">
+  <meta name="twitter:creator" content="@myhometouch">
+  <meta name="twitter:title" content="Private Home Care: Find &amp; Book Carers in the UK | HomeTouch">
+  <meta name="twitter:description" content="HomeTouch offers a wide variety of vetted private carers, that can be booked online. Find, interview, and book home carers or live-in-carers across the UK">
+  <meta name="twitter:image" content="./public/images/social-preview.jpg">
+
+  <meta name="author" content="HomeTouch"/>
+  <meta name="rating" content="General"/>
+  <meta name="copyright" content="Â© HomeTouch 2015. All Rights Reserved"/>
+  <meta name="apple-mobile-web-app-title" content="HomeTouch">
+  <meta name="application-name" content="HomeTouch">
+  <meta name="msapplication-TileColor" content="#1c5799">
+  <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="favicons/browserconfig.xml">
+
+
+  <meta name="google-site-verification" content="vbZFU1ge9v8ob518RGYDQ-TyZUP4bbdwYh5p_jVL3Mo" />
+  <meta name="google-site-verification" content="qBo0hcFHJq_CYbnRPp_zHoaTyJtn7O4nx9LZ-qiWcZw" />
+
+  <link rel="shortcut icon" href="image/favicon.ico">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="image/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="image/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="image/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="image/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="image/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="image/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="image/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="image/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="image/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="image/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="image/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="image/favicon-32x32.png" sizes="32x32">
+
+
+  <!-- build:css(.) /public/css/user_signup_vendors.min.css -->
+  <link rel="stylesheet" type="text/css" href="css/material.custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- endbuild -->
+  <!-- build:css(.) /public/css/website.min.css -->
+  <link rel="stylesheet" href="css/bootstrap.css.1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/hometouch.css">
+  <link rel="stylesheet" type="text/css" href="css/carer-badges.css">
+  <!-- endbuild -->
+
+  
+  <style>html.ng-cloak {display: none;}</style>
+</head>
+<body ng-cloak>
+
+  <div id="alerts-container" ng-include="'/public/admin/templates/alerts.html'"></div>
+
+  <div class="home-page">
+
+      <header class="ht-header">
+	  <!--
+        <div class="ht-menu">
+          <ul class="ht-list -list-menu clearfix">
+            <li class="list-item">
+              <a href="/about">About us</a>
+            </li>
+            <li class="list-item">
+              <a href="http://blog.myhometouch.com">Blog</a>
+            </li>
+            <li class="list-item">
+              <a href="/faq-caremarketplace">FAQ</a>
+            </li>
+            <li class="list-item">
+              <a href="/jobs">Jobs</a>
+            </li>
+            <li class="list-item">
+              <a href="/terms-caremarketplace">T&amp;Cs</a>
+            </li>
+            <li class="list-item">
+              <a href="/carers">Profiles</a>
+            </li>
+            <li class="list-item">
+              <a href="/contact">Contact us</a>
+            </li>
+            <li class="list-item -item-close">
+              <a class="js-menu" href="javascript:void(0)">
+                <span>X</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+		-->
+        <div class="row -padding-y-5">
+          <div class="col-xs-5 col-sm-4 partial">
+            <a href="/" class="ht-image -image-logo pull-left"><img src="image/ht-logo.png" alt="logo"></a>
+            <a href="/" class="ht-image -image-logo -mobile pull-left"><img src="image/ht-logo-mobile.png" alt="logo"></a>
+          </div>
+          <div class="col-xs-7 col-sm-8 partial text-right">
+            <ul class="ht-list -list-main">
+              <li class="list-item">
+                  <a href="/carer_signup">草根医生</a>
+              </li>
+              <li class="list-item -item-tel">
+                <a href="tel:02071486746">
+                  <i class="ht-icon icon-phone"></i>
+                      <span>
+                        0207 148 6746
+                      </span>
+                </a>
+              </li>
+      
+              <li class="list-item -login">
+      
+                  <a href="/app/login">登录</a>
+      
+              </li>
+              <li class="list-item -item-menu">
+                <a class="js-menu" href="javascript:void(0)">
+                  <i class="ht-icon icon-hamburger"></i>
+                  <span>X</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+		<!--
+        <div class="row ht-menu-mobile">
+          <div class="col-xs-12">
+            <ul class="ht-list -list-main-mobile">
+              <li class="list-item">
+                  <a href="/carer_signup">Work as a Carer</a>
+              </li>
+              <li class="list-item">
+                  <a href="/app/login">Log In</a>
+              </li>
+              <li class="list-item">
+                <a href="tel:+44 20 7148 6746">Call Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+		-->
+      </header>
+
+      <section>
+  <article class="ht-wrapper -wrapper-cta -lg">
+    <div class="ht-wrapper-inner -wrapper-cta">
+      <h1 class="ht-title -title-lg">健康就在你身边，因为口袋医生</h1>
+      <form class="ht-form -form-search clearfix" action="/disease/search">
+        <div class="partial -left ht-quick-filter">
+          <div class="ht-quick-filter__textfield-wrapper">
+            <input name="q" type="text" class="ht-form-text -text-lg js-location"
+                   placeholder="病症描述" autofocus="autofocus">
+          </div>
+		  <!--
+          <div class="ht-quick-filter__wrapper">
+            <div class="ht-wrapper -wrapper-select dropdown -js-dropdown ht-dropdown " ng-model="" name="specialisation">                        
+			  <div class="select-overlay dropdown-toggle ht-form__dropdown-arrow ht-quick-filter__button" data-toggle="dropdown" aria-expanded="true">
+                <span class="-js-label ht-quick-filter__label">Personal care</span>
+                <span class="ht-icon icon-arrow-left "></span>
+              </div>			  
+              <ul class="ht-list -list-refine dropdown-menu js-list">
+                    <li class="list-item" data-value="personal" data-group="specialisation">Personal care</li>
+                    <li class="list-item" data-value="companionship" data-group="specialisation">Companionship</li>
+                    <li class="list-item" data-value="specialist" data-group="specialisation">Specialist</li>
+              </ul>
+                <input type="hidden" class="-js-dropdown-field" name="specialisation" value="personal"/>
+            </div>          
+		  </div>
+		  -->
+        </div>
+        <div class="partial -right">
+          <button class="btn ht-btn -btn-blue -btn-lg">
+            <span>把把脉</span>
+            <i class="ht-icon icon-search"></i>
+          </button>
+        </div>
+      </form>
+
+      <div class="container">
+        <div class="ht-wrapper -wrapper-negative row">
+          <div class="col-md-4">
+            <div class="ht-box -box-intro clearfix">
+              <i class="ht-icon icon-search"></i>
+              <div class="content">
+                <h3>找药品</h3>
+                <!-- <div>这里有你要找的药品<br>不信你点</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ht-box -box-intro clearfix">
+              <!-- <i class="ht-icon icon-talk"></i> -->
+			  <i class="ht-icon icon-search"></i>
+              <div class="content">
+                <h3>找医院</h3>
+                <!-- <div>这里有你要找的医院<br>不信你点</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ht-box -box-intro clearfix">
+              <!-- <i class="ht-icon icon-tick"></i> -->
+			  <i class="ht-icon icon-search"></i>
+              <div class="content">
+                <h3>找药厂</h3>
+                <!-- <div>这里有你要找的药厂<br>不信你点</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>  
+
+</section>
+
+
+        <footer class="ht-footer">
+          <div class="container">
+            <ul class="ht-list -list-footer clearfix">
+              <li class="list-item">
+                <a href="/about">About us</a>
+              </li>
+              <li class="list-item">
+                <a href="http://blog.myhometouch.com/">Blog</a>
+              </li>
+              <li class="list-item">
+                <a href="/faq-caremarketplace">FAQ</a>
+              </li>
+              <li class="list-item">
+                <a href="/terms-caremarketplace">Customer T&amp;Cs</a>
+              </li>
+              <li class="list-item">
+                <a href="/terms-carer">Carer T&amp;Cs</a>
+              </li>
+              <li class="list-item">
+                <a href="/carers">Profiles</a>
+              </li>
+              <li class="list-item">
+                <a href="/contact">Contact Us</a>
+              </li>
+            </ul>
+        
+        
+            <div class="row content">
+              <div class="col-xs-8">
+                <div class="row">
+                  <div class="col-xs-6 text-center">
+                    <i class="ht-icon icon-phone"></i>
+                    <span>0207 148 6746</span>
+                  </div>
+                  <div class="col-xs-6 text-center">
+                    <a href="mailto:hello@myhometouch.com">
+                      <span>hello@myhometouch.com</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        
+        
+            <div class="row">
+              <div class="col-xs-12 display-mobile">
+                HomeTouch Care Ltd Ground Floor, White Bear Yard, 144A Clerkenwell Road, London, EC1R 5DF
+              </div>
+              <div class="col-xs-12">
+                <p>
+                  HomeTouch is an introductory agency as defined by the Care Quality Commission (CQC). We select, vet and
+                  introduce self-employed carers to clients via an online platform and facilitate care contracts between
+                  clients and self-employed carers. HomeTouch is not a "full service" care agency and is unable to influence
+                  care delivery or manage care plans. "HomeTouch" is the trading name of HomeTouch Care Ltd, a company registered in England and Wales
+                  (9410945). Registered office: 
+        144A Clerkenwell Road, London EC1R 5DF.
+                </p>
+              </div>
+              <div class="col-xs-8 hide-mobile">
+                HomeTouch Care Ltd Ground Floor, White Bear Yard, 144A Clerkenwell Road, London, EC1R 5DF
+              </div>
+              <div class="col-xs-4 text-right">
+                <a class="social" href="https://www.facebook.com/MyHomeTouch" target="_blank">
+                  <i class="ht-icon icon-fb"></i>
+                </a>
+                <a class="social" href="https://twitter.com/myhometouch" target="_blank">
+                  <i class="ht-icon icon-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>    
+  </div>
+
+  
+
+
+  <!-- IE Compatibility shims -->
+  <!-- Also need a Flexibility/Flexie polyfill -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js""></script>
+    <![endif]-->
+
+    <!--[if IE]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.7/es5-shim.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+      <script src="/public/vendors-local/flexibility/flexibility.js"></script>
+    <![endif]-->
+  <!-- end shims -->
+
+
+
+  <!-- build:js(.) /public/js/website/index.js -->
+  <!--
+  <script src="/public/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="/public/vendors/js-cookie/src/js.cookie.js"></script>
+  <script src="/public/vendors/bootstrap-validator/dist/validator.js"></script>
+  <script src="/public/website/slick.min.js"></script>
+  <script src="/public/website/app.js"></script>
+  <script src="/public/website/navigation.js"></script>
+  <script src="/public/website/quick-filter.js"></script>
+  <script src="/public/website/google-map.js"></script>
+  <script src="/public/website/init.js"></script>
+  <script src="/public/website/lead-capture.js"></script>
+  <script src="/public/website/contact.js"></script>
+  <script src="/public/vendors/bootstrap/js/tooltip.js"></script>
+  <script src="/public/vendors/bootstrap/js/popover.js"></script>
+  <script src="/public/vendors/bootstrap/js/dropdown.js"></script>
+  <script src="/public/vendors/lodash/lodash.js"></script>
+  <script src="/public/js/requestAnimationFrame.js"></script>
+  <script src="/public/vendors-local/material-design-lite/material.min.js"></script>
+  <script src="/public/vendors/jquery-placeholder/jquery.placeholder.js"></script>
+  -->
+  <!-- endbuild -->
+
+
+</body>
+</html>
