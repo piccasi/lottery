@@ -4,7 +4,7 @@ public class BmsOtherInfo {
     
     /**
      * 经办人编号
-     */
+     */ 
     private String handleCustId;
     
     private String developLev;        //发展级别
