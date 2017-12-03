@@ -25,4 +25,11 @@ public class UserController {
 		System.out.println("测试提交github");
 		return "showUser";
 	}
+
+	@Override
+	public String toString() {
+		return "UserController [userService=" + userService + "]";
+	}
+	
+	
 }
