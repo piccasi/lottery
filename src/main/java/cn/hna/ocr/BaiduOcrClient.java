@@ -20,7 +20,7 @@ public class BaiduOcrClient {
     public static final String API_KEY = "2OrMqeEjNwf0GYvI7tjEGBYC";
     public static final String SECRET_KEY = "wTlDZEN8j7VToPbX41lSD96hrCIyNUeq";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         // 初始化一个OcrClient
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
