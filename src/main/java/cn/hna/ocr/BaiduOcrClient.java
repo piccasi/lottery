@@ -12,7 +12,7 @@ import com.baidu.aip.ocr.AipOcr;
  * @version 1.0 
  * @parameter  
  * @since  
- * @return  
+ * @return   
  */
 public class BaiduOcrClient {
 	//设置APPID/AK/SK
