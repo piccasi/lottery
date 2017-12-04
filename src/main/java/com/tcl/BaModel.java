@@ -5,7 +5,7 @@ import com.tcl.BafVariants;
 public interface BaModel {
 
     /**
-     * tcl串，格式如下{DATETIME 20041101131948}
+     * tcl涓诧紝鏍煎紡濡備笅{DATETIME 20041101131948}
      * 
      * @return
      */

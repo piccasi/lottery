@@ -32,13 +32,13 @@ public class EjbTradeAction implements Action {
         try {
             TradeResult rlt = trade(serviceName, inMessage);
             if (rlt.getRtType() != 0) {
-                throw new SystemException("9432", "调用BAF错误:" + rlt.getResult());
+                throw new SystemException("9432", "璋冪敤BAF閿欒:" + rlt.getResult());
             }
             return rlt.getResult();
         }
         catch (Exception e) {
-            logger.error("EJB调用错误:" + e.getMessage());
-            throw new SystemException("EJB-999999", "EJB调用错误!", e);
+            logger.error("EJB璋冪敤閿欒:" + e.getMessage());
+            throw new SystemException("EJB-999999", "EJB璋冪敤閿欒!", e);
         }
     }
 
@@ -50,7 +50,7 @@ public class EjbTradeAction implements Action {
         }
         catch (Exception e) {
             logger.error("executeTrade(String, String, CommonResult)", e);
-            crt.modiInfo(-1, "EJB-999999", "EJB调用错误:" + e.getMessage(), e);
+            crt.modiInfo(-1, "EJB-999999", "EJB璋冪敤閿欒:" + e.getMessage(), e);
             return -1;
         }
     }
@@ -65,7 +65,7 @@ public class EjbTradeAction implements Action {
 
     private static Context getInitialContext() throws NamingException {
         if (ejbUrl == null) {
-            throw new SystemException("请设置EJB_URL, 如：t3://130.36.20.50:7001");
+            throw new SystemException("璇疯缃瓻JB_URL, 濡傦細t3://130.36.20.50:7001");
         }
 
         Properties properties = new Properties();

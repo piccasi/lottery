@@ -3,18 +3,18 @@ package common;
 public class BmsOtherInfo {
     
     /**
-     * ¾­°ìÈË±àºÅ
+     * ç»åŠäººç¼–å·
      */ 
     private String handleCustId;
     
-    private String developLev;        //·¢Õ¹¼¶±ğ
+    private String developLev;        //å‘å±•çº§åˆ«
     
-    private String firstDevelopInfo;        //µÚÒ»·¢Õ¹ĞÅÏ¢
+    private String firstDevelopInfo;        //ç¬¬ä¸€å‘å±•ä¿¡æ¯
     
-    private String secondDevelopInfo;        //µÚ¶ş·¢Õ¹ĞÅÏ¢
+    private String secondDevelopInfo;        //ç¬¬äºŒå‘å±•ä¿¡æ¯
     
     /**
-     * ²Ëµ¥ID
+     * èœå•ID
      */
     private String menuId;
 

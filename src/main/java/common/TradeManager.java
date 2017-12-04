@@ -29,7 +29,7 @@ public class TradeManager {
 	
     private static final Log logger = LogFactory.getLog(TradeManager.class);
 
-    /** ±íÃ÷ÊÇaiip_exec_BMS¡¢ aiip_exec_ACCT¡¢ aiip_exec_ABSµÈ£¬Ä¬ÈÏÊÇbms */
+    /** è¡¨æ˜æ˜¯aiip_exec_BMSã€ aiip_exec_ACCTã€ aiip_exec_ABSç­‰ï¼Œé»˜è®¤æ˜¯bms */
     public String region = Constants.AIIP_EXEC_BMS;
     public BafCommInfo commonInfo;
     public CommonResult commonResult;
@@ -118,8 +118,8 @@ public class TradeManager {
     }
 
     /**
-     * Í¨¹ıaddAction·½·¨À´Ìí¼ÓÄãĞèÒªÖ´ĞĞµÄbaf<br>
-     * ÄãÖ»ĞèÒªÊµÏÖBaModelĞèÒªµÄÁ½¸ö·½·¨£¬getActionName£¬getBafVariants
+     * é€šè¿‡addActionæ–¹æ³•æ¥æ·»åŠ ä½ éœ€è¦æ‰§è¡Œçš„baf<br>
+     * ä½ åªéœ€è¦å®ç°BaModeléœ€è¦çš„ä¸¤ä¸ªæ–¹æ³•ï¼ŒgetActionNameï¼ŒgetBafVariants
      */
     public void addAction(BaModel actionModel) {
         if (actionModel == null) {
@@ -134,12 +134,12 @@ public class TradeManager {
      * <li> {cardNum 1111} {acctId 222}
      */
     public void addAction(String actionName, BafVariants bafVar) {
-        Assert.notNull(bafVar, "bafVarÎª¿Õ£¡");
+        Assert.notNull(bafVar, "bafVarä¸ºç©ºï¼");
         bafAction.addAction(new BafActionInfo(actionName, bafVar));
     }
 
     /**
-     * ¼òµ¥µÄµ÷ÓÃ·½Ê½
+     * ç®€å•çš„è°ƒç”¨æ–¹å¼
      * <li>actionName = Res_Sim_Sell
      * <li>actionDetail = {cardNum 1111} {acctId 222}
      */
@@ -152,7 +152,7 @@ public class TradeManager {
     }
 
     /**
-     * Çå³ı²¿·Ö±äÁ¿£¬ÕùÈ¡Ñ­»·ÖĞ¸´ÓÃ¸Ãmanager
+     * æ¸…é™¤éƒ¨åˆ†å˜é‡ï¼Œäº‰å–å¾ªç¯ä¸­å¤ç”¨è¯¥manager
      */
     public void clear() {
         removeAllAction();
@@ -160,8 +160,8 @@ public class TradeManager {
     }
 
     public int execute() {
-        Assert.notNull(commonResult, "commonResult±ØĞëÔÚÍâÃæ³õÊ¼»¯£¡");
-        Assert.notNull(commonInfo, "commonInfo±ØĞëÔÚÍâÃæ³õÊ¼»¯,²¢ÇÒÓĞÒâÒå£¡");
+        Assert.notNull(commonResult, "commonResultå¿…é¡»åœ¨å¤–é¢åˆå§‹åŒ–ï¼");
+        Assert.notNull(commonInfo, "commonInfoå¿…é¡»åœ¨å¤–é¢åˆå§‹åŒ–,å¹¶ä¸”æœ‰æ„ä¹‰ï¼");
 
         bafAction.setCommInfo(commonInfo);
         
@@ -183,7 +183,7 @@ public class TradeManager {
         // add by yansd 20090523
     	bafAction.setCommInfo(this.commonInfo);
     	
-        logger.debug("´òÓ¡ bafAction.toString()=" + bafAction.toString());
+        logger.debug("æ‰“å° bafAction.toString()=" + bafAction.toString());
 
         if (TradeAction.execute(region, bafAction, commonResult) == Constants.ERROR) {
             return Constants.ERROR;
@@ -199,7 +199,7 @@ public class TradeManager {
     
     public static void main(String[] args) 
     {
-    	//µÚÒ»ÖÖ·½Ê½µ÷ÓÃ 
+    	//ç¬¬ä¸€ç§æ–¹å¼è°ƒç”¨ 
     
     	BmsUserSugDef bmsUserSugDef = new BmsUserSugDef();
 	        bmsUserSugDef.setRegionId("A");
@@ -223,8 +223,8 @@ public class TradeManager {
     }
 
     public String getTclStr() {
-        Assert.notNull(commonResult, "commonResult±ØĞëÔÚÍâÃæ³õÊ¼»¯£¡");
-        Assert.notNull(commonInfo, "commonInfo±ØĞëÔÚÍâÃæ³õÊ¼»¯,²¢ÇÒÓĞÒâÒå£¡");
+        Assert.notNull(commonResult, "commonResultå¿…é¡»åœ¨å¤–é¢åˆå§‹åŒ–ï¼");
+        Assert.notNull(commonInfo, "commonInfoå¿…é¡»åœ¨å¤–é¢åˆå§‹åŒ–,å¹¶ä¸”æœ‰æ„ä¹‰ï¼");
 
         bafAction.setCommInfo(commonInfo);
         return bafAction.getTclStr();
@@ -235,7 +235,7 @@ public class TradeManager {
     }
 
     /**
-     * µ¥¸öactionµÄµ÷ÓÃÖ±½ÓÊ¹ÓÃ¸Ã½Ó¿Ú¼´¿É¡£²»ĞèÒªÄÇÃ´Âé·³ÁË
+     * å•ä¸ªactionçš„è°ƒç”¨ç›´æ¥ä½¿ç”¨è¯¥æ¥å£å³å¯ã€‚ä¸éœ€è¦é‚£ä¹ˆéº»çƒ¦äº†
      * 
      */
     public static String executeBaf(BaModel actionModel) {
@@ -253,8 +253,8 @@ public class TradeManager {
          TradeManager manager = new TradeManager("10031", opmode, authInfo, commonResult, "13098776567", "");
          manager.addAction(actionModel);
         if (manager.execute() != Constants.OK) {
-            // ×ßÒì³££¬ÒòÎª³ö´íµÄ»ú»áºÜÉÙ
-            logger.error("Ö´ĞĞbaf³ö´í£¬´íÎóÔ­Òò£º" + commonResult.getMessage());
+            // èµ°å¼‚å¸¸ï¼Œå› ä¸ºå‡ºé”™çš„æœºä¼šå¾ˆå°‘
+            logger.error("æ‰§è¡Œbafå‡ºé”™ï¼Œé”™è¯¯åŸå› ï¼š" + commonResult.getMessage());
             throw new SystemException("9013", commonResult.getMessage());
         }
 
@@ -264,7 +264,7 @@ public class TradeManager {
     /**
      *  add by xupp
      *  
-     *  ÓÃÓÚÓ††Î²éÔƒ
+     *  ç”¨äºè¨‚å–®æŸ¥è©¢
      * @param actionModel
      * @param opmode
      * @return
@@ -280,8 +280,8 @@ public class TradeManager {
         manager.addAction(actionModel);
 
         if (manager.execute() != Constants.OK) {
-            // ×ßÒì³££¬ÒòÎª³ö´íµÄ»ú»áºÜÉÙ
-            logger.error("Ö´ĞĞbaf³ö´í£¬´íÎóÔ­Òò£º" + commonResult.getMessage());
+            // èµ°å¼‚å¸¸ï¼Œå› ä¸ºå‡ºé”™çš„æœºä¼šå¾ˆå°‘
+            logger.error("æ‰§è¡Œbafå‡ºé”™ï¼Œé”™è¯¯åŸå› ï¼š" + commonResult.getMessage());
             throw new SystemException("9013", commonResult.getMessage());
         }
 
@@ -289,10 +289,10 @@ public class TradeManager {
     }
     
     public static String getId(String idPrefix) {
-        Assert.hasLength(idPrefix, "idPrefix²»ÄÜÎª¿Õ");
+        Assert.hasLength(idPrefix, "idPrefixä¸èƒ½ä¸ºç©º");
 
         if (!StringUtils.hasText(idPrefix) || idPrefix.length() > 16) {
-            throw new SystemException("90123", String.format("»ñÈ¡idµÄÇ°×º(%s):±ØĞëÊÇ16ÒÔÄÚµÄ", idPrefix));
+            throw new SystemException("90123", String.format("è·å–idçš„å‰ç¼€(%s):å¿…é¡»æ˜¯16ä»¥å†…çš„", idPrefix));
         }
 
         BaModel actionModel = new SimpleBaModel("Get_Id", "{ID_PREFIX " + idPrefix + "}");
@@ -305,18 +305,18 @@ public class TradeManager {
     }
 
     public String doAction() {
-        Assert.notNull(commonResult, "commonResult±ØĞëÔÚÍâÃæ³õÊ¼»¯£¡");
+        Assert.notNull(commonResult, "commonResultå¿…é¡»åœ¨å¤–é¢åˆå§‹åŒ–ï¼");
         if (commonResult == null) {
             this.commonResult = new CommonResult();
         }
 
         bafAction.setCommInfo(commonInfo);
         if (TradeAction.execute(region, bafAction, commonResult) == Constants.ERROR) {
-            logger.error("Ö´ĞĞbaf³ö´í£¬´íÎóÔ­Òò£º" + commonResult.getMessage());
+            logger.error("æ‰§è¡Œbafå‡ºé”™ï¼Œé”™è¯¯åŸå› ï¼š" + commonResult.getMessage());
             throw new SystemException("9013", commonResult.getMessage());
         }
         else if (commonResult.isError()) {
-            logger.error("Ö´ĞĞbaf³ö´í£¬´íÎóÔ­Òò£º" + commonResult.getMessage());
+            logger.error("æ‰§è¡Œbafå‡ºé”™ï¼Œé”™è¯¯åŸå› ï¼š" + commonResult.getMessage());
             throw new SystemException("9013", commonResult.getMessage());
         }
         return commonResult.getMessage();
@@ -324,7 +324,7 @@ public class TradeManager {
 
     /**
      * @param bafAction
-     * @deprecated ÇëÊ¹ÓÃaddAction·½·¨
+     * @deprecated è¯·ä½¿ç”¨addActionæ–¹æ³•
      */
     public void setBafAction(BaseBafCommand bafAction) {
         this.bafAction = bafAction;

@@ -5,17 +5,17 @@ import java.util.StringTokenizer;
 import com.tcl.ByteList;
 
 /**
- * ½¨Á¢ÈÕÆÚ : Dec 24, 2008 7:38:16 PM<br>
- * ×÷Õß : yaoq<br>
- * Ä£¿é : <br>
- * ÃèÊö : <br>
- * ĞŞ¸ÄÀúÊ·: ĞòºÅ ÈÕÆÚ ĞŞ¸ÄÈË ĞŞ¸ÄÔ­Òò <br>
- * 1 ÖØ¹¹¿ªÊ¼<br>
+ * å»ºç«‹æ—¥æœŸ : Dec 24, 2008 7:38:16 PM<br>
+ * ä½œè€… : yaoq<br>
+ * æ¨¡å— : <br>
+ * æè¿° : <br>
+ * ä¿®æ”¹å†å²: åºå· æ—¥æœŸ ä¿®æ”¹äºº ä¿®æ”¹åŸå›  <br>
+ * 1 é‡æ„å¼€å§‹<br>
  * 2 <br>
  */
 public class StringUtils {
     /**
-     * @return »ñµÃÓÅ»İ
+     * @return è·å¾—ä¼˜æƒ 
      */
     public static String getFavour(String s) {
         if (s == null || s.equals(""))
@@ -38,7 +38,7 @@ public class StringUtils {
     }
 
     /**
-     * ½«Ê×Ğ´×ÖÄ¸´óĞ´
+     * å°†é¦–å†™å­—æ¯å¤§å†™
      * @param str
      * @return
      */
@@ -56,7 +56,7 @@ public class StringUtils {
     }
 
     /**
-     * ×ª»»³É´óĞ´
+     * è½¬æ¢æˆå¤§å†™
      * @param str
      * @return
      */
@@ -65,7 +65,7 @@ public class StringUtils {
     }
 
     /**
-     * ×ª»»³ÉĞ¡Ğ´
+     * è½¬æ¢æˆå°å†™
      * @param str
      * @return
      */
@@ -78,7 +78,7 @@ public class StringUtils {
     }
 
     /*
-     * ÈôStringÎªnull»ò"",Ôò×ª»»Îª{}
+     * è‹¥Stringä¸ºnullæˆ–"",åˆ™è½¬æ¢ä¸º{}
      */
     public static String blankToBracket(String str) {
         if (str == null || str.equals(""))
@@ -87,7 +87,7 @@ public class StringUtils {
     }
 
     /*
-     * ÈôStringÎªnull»ò"",Ôò×ª»»Îª{}
+     * è‹¥Stringä¸ºnullæˆ–"",åˆ™è½¬æ¢ä¸º{}
      */
     public static String blankToZero(String str) {
         if (str == null || str.equals(""))
@@ -96,7 +96,7 @@ public class StringUtils {
     }
 
     /**
-     * »ñµÃÒ»¸öÇ°±ß²¹n¸övarµÄsrc×Ö¶Î
+     * è·å¾—ä¸€ä¸ªå‰è¾¹è¡¥nä¸ªvarçš„srcå­—æ®µ
      * @param src
      * @param n
      * @param var
@@ -113,10 +113,10 @@ public class StringUtils {
     }
 
     /**
-     * »ñµÃÒ»¸öĞŞÊÎºóµÄ¶¨³¤×Ö´®<br>
-     * ×¢£º³¤¶È=conzt×Ö´®µÄ³¤¶È
-     * @param conzt ³£Á¿×Ö´®
-     * @param var ±äÁ¿×Ö´®
+     * è·å¾—ä¸€ä¸ªä¿®é¥°åçš„å®šé•¿å­—ä¸²<br>
+     * æ³¨ï¼šé•¿åº¦=conztå­—ä¸²çš„é•¿åº¦
+     * @param conzt å¸¸é‡å­—ä¸²
+     * @param var å˜é‡å­—ä¸²
      * @return String
      */
     public static String getTrimString(String conzt, String var) {
@@ -125,11 +125,11 @@ public class StringUtils {
     }
 
     /**
-     * »ñµÃÒ»¸ö³¤¶ÈÎªnµÄ×Ö¶Î<br>
-     * ¹æÔò£º<br>
-     * 1¡¢srcµÄ³¤¶È<n£¬ÔòÔÚsrcºó²¹¿Õ¸ñ<br>
-     * 2¡¢src==null,Ôò·µ»Øn¸ö¿Õ¸ñ<br>
-     * 3¡¢src.length>=n,Ôò·µ»Ø×Ö´®³¤¶È=src.length
+     * è·å¾—ä¸€ä¸ªé•¿åº¦ä¸ºnçš„å­—æ®µ<br>
+     * è§„åˆ™ï¼š<br>
+     * 1ã€srcçš„é•¿åº¦<nï¼Œåˆ™åœ¨srcåè¡¥ç©ºæ ¼<br>
+     * 2ã€src==null,åˆ™è¿”å›nä¸ªç©ºæ ¼<br>
+     * 3ã€src.length>=n,åˆ™è¿”å›å­—ä¸²é•¿åº¦=src.length
      * @param src
      * @param n
      * @return
@@ -147,10 +147,10 @@ public class StringUtils {
     }
 
     /**
-     * »ñµÃÒ»¸öĞŞÊÎºóµÄ¶¨³¤×Ö´®<br>
-     * ×¢£º³¤¶È=conzt×Ö´®µÄ³¤¶È
-     * @param conzt ³£Á¿×Ö´®
-     * @param var ±äÁ¿×Ö´®
+     * è·å¾—ä¸€ä¸ªä¿®é¥°åçš„å®šé•¿å­—ä¸²<br>
+     * æ³¨ï¼šé•¿åº¦=conztå­—ä¸²çš„é•¿åº¦
+     * @param conzt å¸¸é‡å­—ä¸²
+     * @param var å˜é‡å­—ä¸²
      * @return String
      */
     public static String getTrimString(String conzt, int var) {
@@ -159,8 +159,8 @@ public class StringUtils {
     }
 
     /**
-     * ½«ÊäÈë×Ö´®×÷ÈçÏÂ´¦Àí£º 1¡¢×Ö´®ÖĞ´æÔÚ¡¾|¡¿£¬ÓÃ¿Õ¸ñ´úÌæ£» 2¡¢×Ö´®ÖĞ´æÔÚ¡¾\n¡¿£¬ÓÃ\\n´úÌæ£» 3¡¢×Ö´®ÖĞ´æÔÚ¡¾\r\n¡¿£¬ÓÃ\r\\n´úÌæ£»
-     * 4¡¢×Ö´®Îª¿Õ£¬Ö±½Ó·µ»Ø¿Õ×Ö´®¡£
+     * å°†è¾“å…¥å­—ä¸²ä½œå¦‚ä¸‹å¤„ç†ï¼š 1ã€å­—ä¸²ä¸­å­˜åœ¨ã€|ã€‘ï¼Œç”¨ç©ºæ ¼ä»£æ›¿ï¼› 2ã€å­—ä¸²ä¸­å­˜åœ¨ã€\nã€‘ï¼Œç”¨\\nä»£æ›¿ï¼› 3ã€å­—ä¸²ä¸­å­˜åœ¨ã€\r\nã€‘ï¼Œç”¨\r\\nä»£æ›¿ï¼›
+     * 4ã€å­—ä¸²ä¸ºç©ºï¼Œç›´æ¥è¿”å›ç©ºå­—ä¸²ã€‚
      * @param src
      * @return
      */
@@ -194,10 +194,10 @@ public class StringUtils {
     }
 
     /**
-     * »ñÈ¡·Ç¿Õ×Ö´®<br>
-     * Âú×ãÌõ¼ş£ºÈç¹û×Ö´®sÎªnull£¬·µ»ØÄ¬ÈÏ×Ö´®sdefault£¬·ñÔò·µ»Ø×Ö´®s
+     * è·å–éç©ºå­—ä¸²<br>
+     * æ»¡è¶³æ¡ä»¶ï¼šå¦‚æœå­—ä¸²sä¸ºnullï¼Œè¿”å›é»˜è®¤å­—ä¸²sdefaultï¼Œå¦åˆ™è¿”å›å­—ä¸²s
      * @param s
-     * @param sdefault Ä¬ÈÏÖµ
+     * @param sdefault é»˜è®¤å€¼
      * @return
      */
     public static String getNotNullString(String s, String sdefault) {
@@ -205,7 +205,7 @@ public class StringUtils {
     }
 
     /**
-     * »ñÈ¡·Ç¿Õ×Ö´® Âú×ãÌõ¼ş£ºÈç¹û×Ö´®sÎªnull£¬·µ»Ø¿Õ×Ö´®£¬·ñÔò·µ»Ø×Ö´®s
+     * è·å–éç©ºå­—ä¸² æ»¡è¶³æ¡ä»¶ï¼šå¦‚æœå­—ä¸²sä¸ºnullï¼Œè¿”å›ç©ºå­—ä¸²ï¼Œå¦åˆ™è¿”å›å­—ä¸²s
      * @param s
      * @return
      */
@@ -214,7 +214,7 @@ public class StringUtils {
     }
 
     /**
-     * ·µ»ØÊı×ÖĞÍµÄString¡£½«""×ª»»Îª0
+     * è¿”å›æ•°å­—å‹çš„Stringã€‚å°†""è½¬æ¢ä¸º0
      * @param s
      * @return
      */
@@ -227,8 +227,8 @@ public class StringUtils {
     }
 
     /**
-     * ½«ÊıÖµÀàĞÍ×ª»»³É×Ö´®<br>
-     * Âú×ãÌõ¼ş£ºÈç¹ûÊı¾İÖµiDataµÈÓÚÄ¬ÈÏÖµiNull£¬·µ»Ø¿Õ´®£¬·ñÔò·µ»Ø½«iData×÷Îª×Ö´®·µ»Ø
+     * å°†æ•°å€¼ç±»å‹è½¬æ¢æˆå­—ä¸²<br>
+     * æ»¡è¶³æ¡ä»¶ï¼šå¦‚æœæ•°æ®å€¼iDataç­‰äºé»˜è®¤å€¼iNullï¼Œè¿”å›ç©ºä¸²ï¼Œå¦åˆ™è¿”å›å°†iDataä½œä¸ºå­—ä¸²è¿”å›
      * @param iData
      * @param iNull
      * @return
@@ -238,8 +238,8 @@ public class StringUtils {
     }
 
     /**
-     * ½«ÊıÖµÀàĞÍ×ª»»³É×Ö´®<br>
-     * Âú×ãÌõ¼ş£ºÈç¹ûÊı¾İÖµlDataµÈÓÚÄ¬ÈÏÖµlNull£¬·µ»Ø¿Õ´®£¬·ñÔò·µ»Ø½«lData×÷Îª×Ö´®·µ»Ø
+     * å°†æ•°å€¼ç±»å‹è½¬æ¢æˆå­—ä¸²<br>
+     * æ»¡è¶³æ¡ä»¶ï¼šå¦‚æœæ•°æ®å€¼lDataç­‰äºé»˜è®¤å€¼lNullï¼Œè¿”å›ç©ºä¸²ï¼Œå¦åˆ™è¿”å›å°†lDataä½œä¸ºå­—ä¸²è¿”å›
      * @param lData
      * @param lNull
      * @return
@@ -249,8 +249,8 @@ public class StringUtils {
     }
 
     /**
-     * ½«ÊıÖµÀàĞÍ×ª»»³É×Ö´®<br>
-     * Âú×ãÌõ¼ş£ºÈç¹ûÊı¾İÖµfDataµÈÓÚÄ¬ÈÏÖµfNull£¬·µ»Ø¿Õ´®£¬·ñÔò·µ»Ø½«fData×÷Îª×Ö´®·µ»Ø
+     * å°†æ•°å€¼ç±»å‹è½¬æ¢æˆå­—ä¸²<br>
+     * æ»¡è¶³æ¡ä»¶ï¼šå¦‚æœæ•°æ®å€¼fDataç­‰äºé»˜è®¤å€¼fNullï¼Œè¿”å›ç©ºä¸²ï¼Œå¦åˆ™è¿”å›å°†fDataä½œä¸ºå­—ä¸²è¿”å›
      * @param fData
      * @param fNull
      * @return
@@ -260,8 +260,8 @@ public class StringUtils {
     }
 
     /**
-     * ½«ÊıÖµÀàĞÍ×ª»»³É×Ö´®<br>
-     * Âú×ãÌõ¼ş£ºÈç¹ûÊı¾İÖµdDataµÈÓÚÄ¬ÈÏÖµdNull£¬·µ»Ø¿Õ´®£¬·ñÔò·µ»Ø½«dData×÷Îª×Ö´®·µ»Ø
+     * å°†æ•°å€¼ç±»å‹è½¬æ¢æˆå­—ä¸²<br>
+     * æ»¡è¶³æ¡ä»¶ï¼šå¦‚æœæ•°æ®å€¼dDataç­‰äºé»˜è®¤å€¼dNullï¼Œè¿”å›ç©ºä¸²ï¼Œå¦åˆ™è¿”å›å°†dDataä½œä¸ºå­—ä¸²è¿”å›
      * @param dData
      * @param dNull
      * @return
@@ -283,7 +283,7 @@ public class StringUtils {
     }
 
     /*
-     * ½«doubleÀàĞÍÈ¥µôĞ¡ÊıµãºóÃæµÄ0£¨ÔÚ.0ºÍ.00µÄÇé¿öÏÂ£© dData ±»×ª»»µÄdouble
+     * å°†doubleç±»å‹å»æ‰å°æ•°ç‚¹åé¢çš„0ï¼ˆåœ¨.0å’Œ.00çš„æƒ…å†µä¸‹ï¼‰ dData è¢«è½¬æ¢çš„double
      */
     public static String doubleRemove0(double dData) {
         String tmp = Double.toString(dData);
@@ -299,11 +299,11 @@ public class StringUtils {
     }
 
     /**
-     * ½«Êı×éÖĞµÄÊı¾İ×ª»»³ÉsqlµÄÓï¾ä,±ÈÈç field in ('a ','b ')
-     * @param feildname ×Ö¶ÎÃû³Æ
-     * @param arrays Êı×é('a','b',...)
-     * @param fieldtype Êı¾İÀàĞÍ("CHAR")
-     * @param fieldlen ×Ö¶Î³¤¶È
+     * å°†æ•°ç»„ä¸­çš„æ•°æ®è½¬æ¢æˆsqlçš„è¯­å¥,æ¯”å¦‚ field in ('a ','b ')
+     * @param feildname å­—æ®µåç§°
+     * @param arrays æ•°ç»„('a','b',...)
+     * @param fieldtype æ•°æ®ç±»å‹("CHAR")
+     * @param fieldlen å­—æ®µé•¿åº¦
      * @return
      */
     public static String getSqlIn(String feildname, String[] arrays, String fieldtype, int fieldlen) {
@@ -330,8 +330,8 @@ public class StringUtils {
     }
 
     /**
-     * ½«×Ö·û´®×ª»»³ÉÈÕÆÚYYYY-MM-DD HH24:MI:SS
-     * @param str ÈÕÆÚ×Ö·û´®YYYYMMDDHH24MISS
+     * å°†å­—ç¬¦ä¸²è½¬æ¢æˆæ—¥æœŸYYYY-MM-DD HH24:MI:SS
+     * @param str æ—¥æœŸå­—ç¬¦ä¸²YYYYMMDDHH24MISS
      * @return
      */
     public static String toFormatDate(String str) {
@@ -353,7 +353,7 @@ public class StringUtils {
     }
 
     /**
-     * ·µ»ØÇ°Ãæ´ø0µÄÊı×Ö
+     * è¿”å›å‰é¢å¸¦0çš„æ•°å­—
      * @param i
      * @param length
      * @return
@@ -372,9 +372,9 @@ public class StringUtils {
     }
 
     /**
-     * ½«·Ö¸ô·û²ğ·Öµ½Êı×é
-     * @param str ±»²ğ·Ö×Ö·û´®
-     * @param splitstr ·Ö¸ô·û
+     * å°†åˆ†éš”ç¬¦æ‹†åˆ†åˆ°æ•°ç»„
+     * @param str è¢«æ‹†åˆ†å­—ç¬¦ä¸²
+     * @param splitstr åˆ†éš”ç¬¦
      * @return
      */
     public static String[] splitStr(String str, String splitstr) {
@@ -393,7 +393,7 @@ public class StringUtils {
     }
 
     /**
-     * ×Ö·û´®Ìæ»»£¬(ÒòÎªString.replaceAll·½·¨ÓĞĞ©×Ö·û»á²»ÄÜÌæ»»).²»ÊÊºÏ´óÊı¾İÁ¿µÄÌæ»»
+     * å­—ç¬¦ä¸²æ›¿æ¢ï¼Œ(å› ä¸ºString.replaceAllæ–¹æ³•æœ‰äº›å­—ç¬¦ä¼šä¸èƒ½æ›¿æ¢).ä¸é€‚åˆå¤§æ•°æ®é‡çš„æ›¿æ¢
      * @param strSource
      * @param strFrom
      * @param strTo
@@ -415,7 +415,7 @@ public class StringUtils {
     }
 
     /**
-     * yq added ×ó±ßÌí¼Ó0¡£±ÈÈç¹¤µ¥IDµÄÉú³É¹æÔòÊÇ£ºÈÕÆÚ£«sequence 200605 £« 00000000£« 1
+     * yq added å·¦è¾¹æ·»åŠ 0ã€‚æ¯”å¦‚å·¥å•IDçš„ç”Ÿæˆè§„åˆ™æ˜¯ï¼šæ—¥æœŸï¼‹sequence 200605 ï¼‹ 00000000ï¼‹ 1
      * 
      * @param str
      * @param size
@@ -445,23 +445,23 @@ public class StringUtils {
     }
 
     /**
-     * ¹¦ÄÜ£º¸ù¾İÏŞÖÆ³¤¶È½ØÈ¡×Ö·û´®£¨×Ö·û´®ÖĞ°üÀ¨ºº×Ö£¬Ò»¸öºº×ÖµÈÓÚÁ½¸ö×Ö·û£©
-     * @param strParameter Òª½ØÈ¡µÄ×Ö·û´®
-     * @param limitLength ½ØÈ¡µÄ³¤¶È
-     * @return ½ØÈ¡ºóµÄ×Ö·û´®
+     * åŠŸèƒ½ï¼šæ ¹æ®é™åˆ¶é•¿åº¦æˆªå–å­—ç¬¦ä¸²ï¼ˆå­—ç¬¦ä¸²ä¸­åŒ…æ‹¬æ±‰å­—ï¼Œä¸€ä¸ªæ±‰å­—ç­‰äºä¸¤ä¸ªå­—ç¬¦ï¼‰
+     * @param strParameter è¦æˆªå–çš„å­—ç¬¦ä¸²
+     * @param limitLength æˆªå–çš„é•¿åº¦
+     * @return æˆªå–åçš„å­—ç¬¦ä¸²
      */
     public static String getStrByLen(String strParameter, int limitLength) {
-        String return_str = strParameter;// ·µ»ØµÄ×Ö·û´®
-        int temp_int = 0;// ½«ºº×Ö×ª»»³ÉÁ½¸ö×Ö·ûºóµÄ×Ö·û´®³¤¶È
-        int cut_int = 0;// ¶ÔÔ­Ê¼×Ö·û´®½ØÈ¡µÄ³¤¶È
-        byte[] b = strParameter.getBytes();// ½«×Ö·û´®×ª»»³É×Ö·ûÊı×é
+        String return_str = strParameter;// è¿”å›çš„å­—ç¬¦ä¸²
+        int temp_int = 0;// å°†æ±‰å­—è½¬æ¢æˆä¸¤ä¸ªå­—ç¬¦åçš„å­—ç¬¦ä¸²é•¿åº¦
+        int cut_int = 0;// å¯¹åŸå§‹å­—ç¬¦ä¸²æˆªå–çš„é•¿åº¦
+        byte[] b = strParameter.getBytes();// å°†å­—ç¬¦ä¸²è½¬æ¢æˆå­—ç¬¦æ•°ç»„
 
         for (int i = 0; i < b.length; i++) {
             if (b[i] >= 0) {
                 temp_int = temp_int + 1;
             }
             else {
-                temp_int = temp_int + 2;// Ò»¸öºº×ÖµÈÓÚÁ½¸ö×Ö·û
+                temp_int = temp_int + 2;// ä¸€ä¸ªæ±‰å­—ç­‰äºä¸¤ä¸ªå­—ç¬¦
                 i++;
             }
             cut_int++;
@@ -505,7 +505,7 @@ public class StringUtils {
 
     public static void main(String[] args) {
         try {
-            System.out.println(StringUtils.getStrByLen("ÎÒABCººDEF", 6));
+            System.out.println(StringUtils.getStrByLen("æˆ‘ABCæ±‰DEF", 6));
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -550,7 +550,7 @@ public class StringUtils {
 
     /**
      * 
-     * ±ÜÃâÁ¬ĞøÁ½¸ö\t³öÏÖ´íÎó; split·½·¨¶Ô\t\t Ö»ÄÜµÃµ½length=0; bug fixed at 080119
+     * é¿å…è¿ç»­ä¸¤ä¸ª\tå‡ºç°é”™è¯¯; splitæ–¹æ³•å¯¹\t\t åªèƒ½å¾—åˆ°length=0; bug fixed at 080119
      * 
      * @param inSTR
      * @param splitChar

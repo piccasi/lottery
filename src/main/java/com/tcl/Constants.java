@@ -4,15 +4,15 @@ public final class Constants {
     public static int OK = 0;
     public static int ERROR = -1;
 
-    /** ´íÎóµÄ³¬¼¶ÃÜÂë */
+    /** é”™è¯¯çš„è¶…çº§å¯†ç  */
     public static int ERROR_SUPER_PWD = -2;
 
-    /** ´íÎóµÄÓÃ»§ÃÜÂëĞ£Ñé */
+    /** é”™è¯¯çš„ç”¨æˆ·å¯†ç æ ¡éªŒ */
     public static int ERROR_PWD = -3;
 
-    /** ´íÎóµÄÓÃ»§ÒµÎñĞ£Ñé£¬¼´¸ÃÓÃ»§ÎŞÈ¨×ö¸ÃÒµÎñ */
+    /** é”™è¯¯çš„ç”¨æˆ·ä¸šåŠ¡æ ¡éªŒï¼Œå³è¯¥ç”¨æˆ·æ— æƒåšè¯¥ä¸šåŠ¡ */
     public static int ERROR_BUSIRULE = -4;
-    /** ÕÔÖ¾Ã÷¼ÓÈë¿ªÊ¼ */
+    /** èµµå¿—æ˜åŠ å…¥å¼€å§‹ */
     public static String subscriputionIProvisionAction="60241";
     public static String chgAccPayNumAction="10535";
     public static String qryChgarAction="10135";
@@ -21,7 +21,7 @@ public final class Constants {
     public static String uniCustomerAction="10540";
     public static String chgarAction="10102";
     public static String chgAccPayNewAction="10505";
-    /** ÕÔÖ¾Ã÷¼ÓÈë½áÊø */
+    /** èµµå¿—æ˜åŠ å…¥ç»“æŸ */
     public static String AIIP_EXEC_BMS = "aiip_exec_BMS";
     public static String AIIP_EXEC_ACCT = "aiip_exec_ACCT";
     public static String AIIP_EXEC_QHF = "aiip_exec_QHF";
@@ -31,79 +31,79 @@ public final class Constants {
     public static String AIIP_EXEC_SYNC = "aiip_exec_SYNC";
     public static String AIIP_EXEC_INQ = "aiip_exec_INQ";
 
-    // SESSION KEYÖµ
+    // SESSION KEYå€¼
     public static String RANDOM_TOKEN = "com.asiainfo.frame.web.RANDOM";
     public static String LOGIN_TOKEN = "com.asiainfo.frame.web.LOGIN";
     
     public static String BUSI_ACCEPT = "busi.accept";
-    //Ö÷²úÆ·/½ÚµãÁĞ±íkeyÖµ
+    //ä¸»äº§å“/èŠ‚ç‚¹åˆ—è¡¨keyå€¼
     public static String Node_PdtList="node_pdtlist";
     public static String Node_Set="node_set";
-    //×Ó²úÆ·/½ÚµãÁĞ±íkeyÖµ
+    //å­äº§å“/èŠ‚ç‚¹åˆ—è¡¨keyå€¼
     public static String c_Node_PdtList="c_node_pdtlist";
     public static String c_Node_Set="c_node_set";
     
-    //»î¶¯/½ÚµãÁĞ±íkeyÖµ
+    //æ´»åŠ¨/èŠ‚ç‚¹åˆ—è¡¨keyå€¼
     public static String Node_SchemeList="node_scheme_list";
     public static String Node_SchemeSet="node_scheme_set";
     
-    // ERROR KEYÖµ
+    // ERROR KEYå€¼
     public static String ERROR_KEY = "com.asiainfo.frame.web.ERROR";
 
-    // AppStack KEYÖµ
+    // AppStack KEYå€¼
     public static String STACK = "stack";
 
-    // ´íÎóÒ³ÃæÌø×ªname
+    // é”™è¯¯é¡µé¢è·³è½¬name
     public static String STACKJSP = "errpage";
 
-    // Í³Ò»±¨´íjspÌø×ªÒ³ÃænextPageµÄÃû³Æ
+    // ç»Ÿä¸€æŠ¥é”™jspè·³è½¬é¡µé¢nextPageçš„åç§°
     public static String COMMONRESULTJSP = "commonResultjsp";
-    // ½É·Ñ³É¹¦jspÌø×ªÒ³ÃænextPageµÄÃû³Æ
+    // ç¼´è´¹æˆåŠŸjspè·³è½¬é¡µé¢nextPageçš„åç§°
     public static String DEPOSITOK = "depositOK";
 
-    // Í³Ò»±¨´íĞÅÏ¢¶ÔÏóÃû³Æ
+    // ç»Ÿä¸€æŠ¥é”™ä¿¡æ¯å¯¹è±¡åç§°
     public static String COMMONRESULT = "commonResult";
-    // ´òÓ¡Æ±¾İ¶ÔÏóÃû³Æ
+    // æ‰“å°ç¥¨æ®å¯¹è±¡åç§°
     public static String DEPOSITSHOUJU = "depositShouju";
-    // ¹¤µ¥ĞÅÏ¢
+    // å·¥å•ä¿¡æ¯
     public static String APPWFINFO = "wfInfoPrint";
     
     
     
     
 
-    /** ÕıÈ·Ò³ÃæÌø×ªname */
+    /** æ­£ç¡®é¡µé¢è·³è½¬name */
     public static String SUCCESS = "success";
     public static String PAGE_SUCCESS = "okpagecommonResult";
-    /** Í³Ò»Ä£Ê½³É¹¦Ò³Ãæ */
+    /** ç»Ÿä¸€æ¨¡å¼æˆåŠŸé¡µé¢ */
     public static String PAGE_OKPAGE_COMMON_RESULT = "okpagecommonResult";
-    /** Í³Ò»Ä£Ê½ÌáÊ¾Ò³Ãæ */
+    /** ç»Ÿä¸€æ¨¡å¼æç¤ºé¡µé¢ */
     public static String PAGE_OKPAGE_COMMON_NOTICE = "commonOkNotice";
-    /** Í³Ò»Ä£Ê½³É¹¦Ò³ÃæPopµ¯³ö´°¿Ú */
+    /** ç»Ÿä¸€æ¨¡å¼æˆåŠŸé¡µé¢Popå¼¹å‡ºçª—å£ */
     public static String PAGE_OKPAGE_COMMON_RESULT_POP = "okpagecommonResultPop";
-    /** Í³Ò»Ä£Ê½±¨´íÒ³Ãæ */ 
+    /** ç»Ÿä¸€æ¨¡å¼æŠ¥é”™é¡µé¢ */ 
     public static String PAGE_ERRPAGE_COMMON_RESULT = "errpagecommonResult";
-    /** AJAXÌá½»Í³Ò»Ä£Ê½±¨´íÒ³Ãæ */ 
+    /** AJAXæäº¤ç»Ÿä¸€æ¨¡å¼æŠ¥é”™é¡µé¢ */ 
     public static String PAGE_ERRPAGE_COMMON_AJAX_RESULT = "errpagecommonAjaxResult";
-    /** Í³Ò»Ä£Ê½±¨´íÒ³ÃæPopµ¯³ö´°¿Ú */
+    /** ç»Ÿä¸€æ¨¡å¼æŠ¥é”™é¡µé¢Popå¼¹å‡ºçª—å£ */
     public static String PAGE_ERRPAGE_COMMON_RESULT_POP = "errpagecommonResultPop";
-    /** ÑéÖ¤±¨´íµ«ÊÇÕÕ³£ÏÔÊ¾ÓÃ»§ĞÅÏ¢ */
+    /** éªŒè¯æŠ¥é”™ä½†æ˜¯ç…§å¸¸æ˜¾ç¤ºç”¨æˆ·ä¿¡æ¯ */
     public static String PAGE_ERRPAGE_COMMON_SHOWUSERINFO="checkErrorButShowUserInfo";
-    /** ÑéÖ¤±¨´íµ«ÊÇÕÕ³£ÏÔÊ¾ÖÇÄÜÍøÓÃ»§ĞÅÏ¢ */
+    /** éªŒè¯æŠ¥é”™ä½†æ˜¯ç…§å¸¸æ˜¾ç¤ºæ™ºèƒ½ç½‘ç”¨æˆ·ä¿¡æ¯ */
     public static String PAGE_ERRPAGE_COMMON_SHOWPPSUSERINFO="checkErrorButShowPPSUserInfo";
     
-    /** Õë¶Ô¾ßÌåÓÃ»§²»ÔÊĞí×öÄ³ÒµÎñµÄ±¨´íÒ³Ãæ */
+    /** é’ˆå¯¹å…·ä½“ç”¨æˆ·ä¸å…è®¸åšæŸä¸šåŠ¡çš„æŠ¥é”™é¡µé¢ */
     public static String PAGE_ERROR_BUSIRULE = "errorBusiRule";
-    /** ÃâÌîµ¥Ò³Ãæ */
+    /** å…å¡«å•é¡µé¢ */
     public static String PAGE_WF_INFOPRINT = "wfInfoPrint";
     
-    /** ÅúÁ¿ÈÎÎñ³É¹¦Ìá½»ÏÔÊ¾Ò³Ãæ */
+    /** æ‰¹é‡ä»»åŠ¡æˆåŠŸæäº¤æ˜¾ç¤ºé¡µé¢ */
     public static String PAGE_BATJOBOK = "batJobOK";
-    /** ·ÑÓÃÏà¹Ø */
-    //±êÊ¾·ÑÓÃ¶¯×÷  1£º¸Ä·Ñ 2£ºÊÕ·Ñ
+    /** è´¹ç”¨ç›¸å…³ */
+    //æ ‡ç¤ºè´¹ç”¨åŠ¨ä½œ  1ï¼šæ”¹è´¹ 2ï¼šæ”¶è´¹
     public static String CAL_MODI_FEE_FLAG_1 = "1";
     public static String CAL_MODI_FEE_FLAG_2 = "2";
-    //·ÑÓÃ±êÖ¾  Y£ºÒÑ¸¶£»£¨ÓªÒµ²»Ç··Ñ£©N£ºÎ´¸¶£»£¨Ç··Ñ£© T£º×ªÕÊÎñÎ´¸¶£»£¨ÓªÒµÇ··Ñ£¬µ«²»´¦Àí£¬µÈÕÊÎñÊÕµ½·ÑĞŞ¸Ä±êÖ¾ÎªS£© S£º×ªÕÊÎñÒÑ¸¶£»
+    //è´¹ç”¨æ ‡å¿—  Yï¼šå·²ä»˜ï¼›ï¼ˆè¥ä¸šä¸æ¬ è´¹ï¼‰Nï¼šæœªä»˜ï¼›ï¼ˆæ¬ è´¹ï¼‰ Tï¼šè½¬å¸åŠ¡æœªä»˜ï¼›ï¼ˆè¥ä¸šæ¬ è´¹ï¼Œä½†ä¸å¤„ç†ï¼Œç­‰å¸åŠ¡æ”¶åˆ°è´¹ä¿®æ”¹æ ‡å¿—ä¸ºSï¼‰ Sï¼šè½¬å¸åŠ¡å·²ä»˜ï¼›
 
     public static String FEE_FLAG_ALL = "Y,N,T,S";
     public static String FEE_FLAG_Y = "Y";
@@ -111,40 +111,40 @@ public final class Constants {
     public static String FEE_FLAG_T = "T";
     public static String FEE_FLAG_S = "S";
     
-  // ·¢Æ±±êÖ¾ 1£º·¢Æ±Î´´ò£»2£ºÔ¤´ò·¢Æ±£»3£ºÕı³£´ò·¢Æ±£»
+  // å‘ç¥¨æ ‡å¿— 1ï¼šå‘ç¥¨æœªæ‰“ï¼›2ï¼šé¢„æ‰“å‘ç¥¨ï¼›3ï¼šæ­£å¸¸æ‰“å‘ç¥¨ï¼›
     public static String IS_PRE_PRINT_1 = "1";
     public static String IS_PRE_PRINT_2 = "2";
     public static String IS_PRE_PRINT_3 = "3";
-    /** ÅúÁ¿ÒµÎñÉÏ´«ÎÄ¼şµÄ¹«¹²Ò³Ãæ */
+    /** æ‰¹é‡ä¸šåŠ¡ä¸Šä¼ æ–‡ä»¶çš„å…¬å…±é¡µé¢ */
     public static String PAGE_BATCH_BUSI_UPFILE = "batchBusiUpFile"; 
     public static String PAGE_BATCH_BUSI_MODE = "batchbusimode"; 
     
-    /* ÅúÁ¿ÈÎÎñ´«µİµÄVO ¶ÔÏóÃû³Æ com.asiainfo.crm.service.batch.BatchJobVO.java */
+    /* æ‰¹é‡ä»»åŠ¡ä¼ é€’çš„VO å¯¹è±¡åç§° com.asiainfo.crm.service.batch.BatchJobVO.java */
     public static String BATCHJOBVO = "BATCHJOBVO"; 
    
-//  ´òÓ¡±êÖ¾£¬0ÎªÔ¤´ò£¬1ÎªÕı³£´ò£¬2ÎªÖØ´ò£¬3Îª²¹´ò
+//  æ‰“å°æ ‡å¿—ï¼Œ0ä¸ºé¢„æ‰“ï¼Œ1ä¸ºæ­£å¸¸æ‰“ï¼Œ2ä¸ºé‡æ‰“ï¼Œ3ä¸ºè¡¥æ‰“
     public static String PAY_FLAG_0 = "0";
     public static String PAY_FLAG_1 = "1";
     public static String PAY_FLAG_2 = "2";
     public static String PAY_FLAG_3 = "3";
-    /** ÅúÁ¿ÈÎÎñ Êı¾İÉÏ´«·½Ê½ */
-    public static String JOB_DATA_TYPE_FILE_ONE = "0"; //µ¥ÎÄ¼ş·½Ê½
-    public static String JOB_DATA_TYPE_HAODUAN = "1"; //ºÅ¶Î·½Ê½
-    public static String JOB_DATA_TYPE_FILE_MUL = "2"; //¶àÎÄ¼ş·½Ê½
-    public static String JOB_DATA_TYPE_FILE_FIVE = "5"; //ºóÌ¨ÔÚ´¦ÀíÎÄ¼ş·½Ê½
+    /** æ‰¹é‡ä»»åŠ¡ æ•°æ®ä¸Šä¼ æ–¹å¼ */
+    public static String JOB_DATA_TYPE_FILE_ONE = "0"; //å•æ–‡ä»¶æ–¹å¼
+    public static String JOB_DATA_TYPE_HAODUAN = "1"; //å·æ®µæ–¹å¼
+    public static String JOB_DATA_TYPE_FILE_MUL = "2"; //å¤šæ–‡ä»¶æ–¹å¼
+    public static String JOB_DATA_TYPE_FILE_FIVE = "5"; //åå°åœ¨å¤„ç†æ–‡ä»¶æ–¹å¼
     
     
-    /** ÎÄ¼şÉÏ´«±£Áô·½Ê½ */
-    public static String FILE_TYPE_MID = "MID"; //ÖĞ¼äÎÄ¼ş£¬ ÒÔºó¿ÉÒÔÉ¾³ı¡£
-    public static String FILE_TYPE_AR = "AR"; //¹éµµÎÄ¼ş£¬ ÓÀ¾Ã±£Áô
+    /** æ–‡ä»¶ä¸Šä¼ ä¿ç•™æ–¹å¼ */
+    public static String FILE_TYPE_MID = "MID"; //ä¸­é—´æ–‡ä»¶ï¼Œ ä»¥åå¯ä»¥åˆ é™¤ã€‚
+    public static String FILE_TYPE_AR = "AR"; //å½’æ¡£æ–‡ä»¶ï¼Œ æ°¸ä¹…ä¿ç•™
     
-    //ÊÕ·Ñ·½Ê½         0ÊÕ·Ñ´òÓ¡·¢Æ± "1"ÊÕ·Ñ²»´òÓ¡·¢Æ±"2"Ô¤´ò·¢Æ± "3"²»ÊÕ·Ñ²»´òÓ¡·¢Æ± 
+    //æ”¶è´¹æ–¹å¼         0æ”¶è´¹æ‰“å°å‘ç¥¨ "1"æ”¶è´¹ä¸æ‰“å°å‘ç¥¨"2"é¢„æ‰“å‘ç¥¨ "3"ä¸æ”¶è´¹ä¸æ‰“å°å‘ç¥¨ 
     public static String PAY_OR_INVOICE_0 = "0";
     public static String PAY_OR_INVOICE_1 = "1";
     public static String PAY_OR_INVOICE_2 = "2";
     public static String PAY_OR_INVOICE_3 = "3";
     
-    /** ÒµÎñÊÜÀí³É¹¦£¨º¬·ÑÓÃÆ±¾İ´òÓ¡£©Ò³Ãæ */
+    /** ä¸šåŠ¡å—ç†æˆåŠŸï¼ˆå«è´¹ç”¨ç¥¨æ®æ‰“å°ï¼‰é¡µé¢ */
     public static String PAGE_WF_FEEPRINT = "wfFeePrint";
     public static String PAGE_WF_INFOQUERY = "wfInfoQuery";
     public static String PAGE_WF_AUDIT = "wfAudit";
@@ -169,73 +169,73 @@ public final class Constants {
     public static final String FEEINPUTINFO = "FeeInputinfo";
     public static final String BMS_OHTER_INFO = "bmsOtherInfo";
     
-    /** ·şÎñÀàĞÍ */
-    //GSMµ¥Ä£
+    /** æœåŠ¡ç±»å‹ */
+    //GSMå•æ¨¡
     public static final String GSM_MN = "1001";
-    //GSMÖÇÄÜÍø
+    //GSMæ™ºèƒ½ç½‘
     public static final String GSM_IN = "1011";
-    //GSMË«Ä£
+    //GSMåŒæ¨¡
     public static final String GSM_DB = "1301";
-    //CÍøµ¥Ä£
+    //Cç½‘å•æ¨¡
     public static final String CDMA_MN = "2001";
-    //CÍøÖÇÄÜÍø
+    //Cç½‘æ™ºèƒ½ç½‘
     public static final String CDMA_IN = "2011";
-    //CÍøË«Ä£
+    //Cç½‘åŒæ¨¡
     public static final String CDMA_DB = "2301";
-    //IP×¢²áÒµÎñ
+    //IPæ³¨å†Œä¸šåŠ¡
     public static final String NIP = "4001";
-    //193¼Æ·Ñ»°µ¥
+    //193è®¡è´¹è¯å•
     public static final String N193 = "5001";
     
-    //Ïêµ¥ÒÑ¾­±»ÆÁ±Î
+    //è¯¦å•å·²ç»è¢«å±è”½
     public static final String DETAIL_IS_SHIELD = "1";
-    //Ïêµ¥ÆÁ±ÎÈ¡Ïû
+    //è¯¦å•å±è”½å–æ¶ˆ
     public static final String DETAIL_IS_SHIELD_CANCEL = "2";
-    //Ïêµ¥×´Ì¬ĞŞ¸Ä
+    //è¯¦å•çŠ¶æ€ä¿®æ”¹
     public static final String DETAIL_STAUTS = "1";
-    //Ïêµ¥×´Ì¬ÆÁ±Î
+    //è¯¦å•çŠ¶æ€å±è”½
     public static final String DETAIL_SHIELD = "2";
-    //Ïêµ¥ÓĞĞ§×´Ì¬
+    //è¯¦å•æœ‰æ•ˆçŠ¶æ€
     public static final String DETAIL_STAUTS_ENABLED = "1";
-    //165ÔÚÏßÓÃ»§Çå³ı
+    //165åœ¨çº¿ç”¨æˆ·æ¸…é™¤
     public static final String CLEAR_ONLINE_165="aaa";
     
   
-    /**  ÎÄµµ×ÊÁÏÎ¬»¤Ê¹ÓÃµÄ  **/
+    /**  æ–‡æ¡£èµ„æ–™ç»´æŠ¤ä½¿ç”¨çš„  **/
     public static final String FILE_SEP = System.getProperty("file.separator");
     
-    //sessionÖĞ´¢´æµÄ±¸Ñ¡µÄ·şÎñºÅÂë
+    //sessionä¸­å‚¨å­˜çš„å¤‡é€‰çš„æœåŠ¡å·ç 
     public static final String GLOAB_SVCNUM = "GLOAB_SVCNUM";
-    //sessionÖĞ´æ´¢µÄ±¸Ñ¡µÄ·şÎñÃÜÂë
+    //sessionä¸­å­˜å‚¨çš„å¤‡é€‰çš„æœåŠ¡å¯†ç 
     public static final String GLOAB_PASSWORD = "GLOAB_PASSWORD";
-    //request.getParameter()ÖĞ²ÎÊıkey,´ú±íÊÇ·ñ×Ô¶¯Ìá½»ºÅÂëÈë¿ÚÏÂÒ»²½
+    //request.getParameter()ä¸­å‚æ•°key,ä»£è¡¨æ˜¯å¦è‡ªåŠ¨æäº¤å·ç å…¥å£ä¸‹ä¸€æ­¥
     public static final String AUTO_SVCNUM_NEXT_KEY = "framePara.autoSvcNumNext";
     public static final String AUTO_SVCNUM_NEXT_VALUE = "1";
     public final static String BAF_INFO_IN_SESSION = "BAF_INFO";
-    //¶©µ¥×´Ì¬
-    public final static String CHECK_FAIL_STATUS = "37";//ÊÂÇ°ÉóÅú²»Í¨¹ı
+    //è®¢å•çŠ¶æ€
+    public final static String CHECK_FAIL_STATUS = "37";//äº‹å‰å®¡æ‰¹ä¸é€šè¿‡
     
 
-    //¹ú¼ÊÂşÓÎ°üÀàĞÍ
+    //å›½é™…æ¼«æ¸¸åŒ…ç±»å‹
     public final static String ROAM_PACKAGE_CATA = "1";
     public final static String ROAM_PACKAGE_DEPOSIT_TYPE = "K07G_001";
-    //¹ú¼Ê³¤Í¾°üÀàĞÍ
+    //å›½é™…é•¿é€”åŒ…ç±»å‹
     public final static String LONG_PACKAGE_CATA = "2";
     public final static String LONG_PACKAGE_DEPOSIT_TYPE = "K07G_002";
 
-    //¶©µ¥´¦Àí×´Ì¬:0 Ô¤¶©µ¥Éú³É;3 ÑÓÊ±ÉúĞ§;4 ÒÑ×÷·Ï;5 ´ı×Ô¼ì;8 ÕıÔÚÖ´ĞĞ;9 ÒÑ¿¢¹¤;51 ×Ô¼ìÍ¨¹ı;52 ×Ô¼ì²µ»Ø begin,31 µÈ´ıÌá½»ÉóÅú
-    public final static String ACCEPT_STATUS_CREATE = "0";//Ô¤¶©µ¥Éú³É
-    public final static String ACCEPT_STATUS_COMPLETE = "9";//ÒÑ¿¢¹¤
-    public final static String ACCEPT_STATUS_FOR_COMMIT_CHECK_STATUS = "31";//µÈ´ıÌá½»ÉóÅú
+    //è®¢å•å¤„ç†çŠ¶æ€:0 é¢„è®¢å•ç”Ÿæˆ;3 å»¶æ—¶ç”Ÿæ•ˆ;4 å·²ä½œåºŸ;5 å¾…è‡ªæ£€;8 æ­£åœ¨æ‰§è¡Œ;9 å·²ç«£å·¥;51 è‡ªæ£€é€šè¿‡;52 è‡ªæ£€é©³å› begin,31 ç­‰å¾…æäº¤å®¡æ‰¹
+    public final static String ACCEPT_STATUS_CREATE = "0";//é¢„è®¢å•ç”Ÿæˆ
+    public final static String ACCEPT_STATUS_COMPLETE = "9";//å·²ç«£å·¥
+    public final static String ACCEPT_STATUS_FOR_COMMIT_CHECK_STATUS = "31";//ç­‰å¾…æäº¤å®¡æ‰¹
     //end
     
-    //Ì×²ÍÀàĞÍ 
+    //å¥—é¤ç±»å‹ 
     public final static String PACK_TYPE_BEGIN = "1000";
     public final static String PACK_TYPE_END = "2000";
     //end
    
     
-    // ¿ª»§ĞÂ×°  begin
+    // å¼€æˆ·æ–°è£…  begin
     public final static String OPEN_NEW = "10202";
     
     // end 

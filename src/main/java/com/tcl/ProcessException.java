@@ -1,7 +1,7 @@
 package com.tcl;
 
 public class ProcessException extends Exception {  
-    /** ´íÎóÂë */
+    /** é”™è¯¯ç  */
     protected String errcode;
     
     public ProcessException(String errcode, String errmsg){ 

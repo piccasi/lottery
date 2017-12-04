@@ -1,14 +1,11 @@
 package com.tcl;
-
-import com.tcl.SystemException;
-
 /**
- * 模拟数据异常
+ * 妯℃嫙鏁版嵁寮傚父
  * @author plh
  */
 public class MockDataException extends SystemException {
 	public MockDataException(Throwable cause) {
-		super("SYS-000-9999", "模拟数据异常", cause);
+		super("SYS-000-9999", "妯℃嫙鏁版嵁寮傚父", cause);
 	}
 	public MockDataException(String errcode, String errmsg) {
 		super(errcode, errmsg);
