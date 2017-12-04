@@ -14,13 +14,13 @@ public class OpMode {
     public static final OpMode PRE_DISCARD = new OpMode("PRE_DISCARD");
     public static final OpMode DISCARD = new OpMode("DISCARD");
 
-    /** ��ǰ����--�ύ�����ӿ� */
+    /** 事前审批--提交审批接口 */
     public static final OpMode PRE_CHECK_FOR = new OpMode("PRE_CHECK_FOR");
-    /** ��ǰ����--������ͨ���ӿ� */
+    /** 事前审批--审批不通过接口 */
     public static final OpMode PRE_CHECK_FAIL = new OpMode("PRE_CHECK_FAIL");
-    /** ��ǰ����--������ͨ���˻��շѵĽӿ� */
+    /** 事前审批--审批不通过退还收费的接口 */
     public static final OpMode PRE_CHECK_BACKFEE = new OpMode("PRE_CHECK_BACKFEE");
-    /** ��ǰ����--����ͨ���ӿ� */
+    /** 事前审批--审批通过接口 */
     public static final OpMode PRE_CHECK_COMMIT = new OpMode("PRE_CHECK_COMMIT");
 
     private final String code;

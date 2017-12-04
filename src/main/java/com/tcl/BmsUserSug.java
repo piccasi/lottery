@@ -6,19 +6,19 @@ import com.tcl.MapBafVariantsImpl;
 import com.tcl.StandBafVariants;
 
 public class BmsUserSug implements BaModel {
-    /**业务类别 GSM,CDMA...*/
+	 /**涓氬姟绫诲埆 GSM,CDMA...*/
     protected String serviceType;
 
-    /**用户订购ID*/
+    /**鐢ㄦ埛璁㈣喘ID*/
     protected String subscriptionId;
 
-    /** 地区编码 **/
+    /** 鍦板尯缂栫爜 **/
     private String regionId;
 
-    /** 详细叙述 **/
+    /** 璇︾粏鍙欒堪 **/
     private String remark;
 
-    /** 名字 **/
+    /** 鍚嶅瓧 **/
     private String name;
 
     public String getActionName() {

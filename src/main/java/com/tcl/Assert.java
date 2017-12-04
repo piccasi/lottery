@@ -16,46 +16,46 @@ public abstract class Assert {
     private static final Log logger = LogFactory.getLog(Assert.class);
 
     /**
-     * ÅĞ¶Ï±í´ïÊ½ÊÇ·ñÕıÈ·
+     * åˆ¤æ–­è¡¨è¾¾å¼æ˜¯å¦æ­£ç¡®
      * 
      * @param expression
      * @param message
      */
     public static void isTrue(boolean expression, String message) {
         if (!expression) {
-            logger.error("booleanÅĞ¶Ï´íÎó£¡" + message);
+            logger.error("booleanåˆ¤æ–­é”™è¯¯ï¼" + message);
             throw new IllegalArgumentException(message);
         }
     }
 
     /**
-     * ÅĞ¶ÏtextÊÇ·ñÊÇ·Ç¿Õ¡£
+     * åˆ¤æ–­textæ˜¯å¦æ˜¯éç©ºã€‚
      * 
      * @param text
      * @param message
      */
     public static void hasLength(String text, String message) {
         if (text == null || text.length() == 0) {
-            logger.error("²ÎÊı²»ÄÜÎª·Ç¿Õ£¡" + message);
+            logger.error("å‚æ•°ä¸èƒ½ä¸ºéç©ºï¼" + message);
             throw new IllegalArgumentException(message);
         }
     }
 
     /**
-     * object ²»ÄÜÊÇ¿ÕµÄÅ¶
+     * object ä¸èƒ½æ˜¯ç©ºçš„å“¦
      * 
      * @param object
      * @param message
      */
     public static void notNull(Object object, String message) {
         if (object == null) {
-            logger.error("²ÎÊı²»ÄÜÊÇnull£¡" + message);
+            logger.error("å‚æ•°ä¸èƒ½æ˜¯nullï¼" + message);
             throw new IllegalArgumentException(message);
         }
     }
 
     /**
-     * ÅĞ¶ÏÊÇ·ñÊÇÕıÈ·µÄÈÕÆÚÀàĞÍ
+     * åˆ¤æ–­æ˜¯å¦æ˜¯æ­£ç¡®çš„æ—¥æœŸç±»å‹
      * 
      * @param value
      * @param format
@@ -69,7 +69,7 @@ public abstract class Assert {
         Date date = sdf.parse(value, pos);
 
         if ((date == null) || (pos.getErrorIndex() != -1)) {
-            logger.error("ÈÕÆÚ½âÎö³ö´í£º" + message);
+            logger.error("æ—¥æœŸè§£æå‡ºé”™ï¼š" + message);
             throw new SystemException("9343", message);
         }
     }

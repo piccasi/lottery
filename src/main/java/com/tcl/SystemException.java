@@ -1,7 +1,7 @@
 package com.tcl;
 
 public class SystemException extends RuntimeException {   
-    /** ´íÎóÂë */
+    /** é”™è¯¯ç  */
     protected String errcode;
     
     public SystemException(String errcode, String errmsg){ 

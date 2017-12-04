@@ -11,29 +11,29 @@ import com.tcl.TclMsg;
 public class BafCommInfo {
 
     public static final String OPMODE_SUBMIT = "SUBMIT";
-    /** ÒªÖ´ĞĞµÄbusi code */
+    /** è¦æ‰§è¡Œçš„busi code */
     protected String busiId;
     protected String oldBmsAcceptId;
-    /** ²Ù×÷Ô±ĞÅÏ¢ */
+    /** æ“ä½œå‘˜ä¿¡æ¯ */
     protected BafAuthInfo authInfo;
-    /** ÒªÖ´ĞĞµÄactionËùÔÚµÄchannel */
+    /** è¦æ‰§è¡Œçš„actionæ‰€åœ¨çš„channel */
     protected String channel;
-    /** ¹¤µ¥ºÅ£¬½ö½öÓÃÓÚÕıÊ½Ìá½», ¿ÉÑ¡²ÎÊı */
+    /** å·¥å•å·ï¼Œä»…ä»…ç”¨äºæ­£å¼æäº¤, å¯é€‰å‚æ•° */
     protected String bmsAcceptId;
-    /** ²Ù×÷±¸×¢£¬ ¿ÉÑ¡²ÎÊı */
+    /** æ“ä½œå¤‡æ³¨ï¼Œ å¯é€‰å‚æ•° */
     protected String remark;
-    /** PRE_SUBMIT=Ô¤Ìá½»,SUBMIT=ÕıÊ½Ìá½»(Ä¬ÈÏ)£¬ CANCEL */
+    /** PRE_SUBMIT=é¢„æäº¤,SUBMIT=æ­£å¼æäº¤(é»˜è®¤)ï¼Œ CANCEL */
     protected String opMode;
-    /** Ë÷Òı¹Ø¼ü×Ö */
+    /** ç´¢å¼•å…³é”®å­— */
     protected String busiKey;
     protected String userRegionId;
-    /** ´ú°ìÈË */
+    /** ä»£åŠäºº */
     private String transactor;
-    /** µÚÒ»·¢Õ¹ÈË */
+    /** ç¬¬ä¸€å‘å±•äºº */
     private String firstDevOper;
-    /** µÚ¶ş·¢Õ¹ÈË */
+    /** ç¬¬äºŒå‘å±•äºº */
     private String secondDevOper;
-    /** ·¢Õ¹¼¶±ğ */
+    /** å‘å±•çº§åˆ« */
     private String devLevel;
 
     public BafCommInfo(String busiId, OpMode opMode) {
@@ -42,8 +42,8 @@ public class BafCommInfo {
     }
 
     /**
-     * Ä¬ÈÏÒªÖ´ĞĞµÄactionËùÔÚµÄchannel=Action.CHANNEL_BMS<br>
-     * ²»½¨ÒéÊ¹ÓÃÁË£¬ÇëÊ¹ÓÃÈçÏÂ¹¹Ôìº¯Êı£º<br>
+     * é»˜è®¤è¦æ‰§è¡Œçš„actionæ‰€åœ¨çš„channel=Action.CHANNEL_BMS<br>
+     * ä¸å»ºè®®ä½¿ç”¨äº†ï¼Œè¯·ä½¿ç”¨å¦‚ä¸‹æ„é€ å‡½æ•°ï¼š<br>
      * BafCommInfo(String busiId, OpMode opMode, BafAuthInfo authInfo)
      * 
      * @deprecated
@@ -56,7 +56,7 @@ public class BafCommInfo {
     }
 
     /**
-     * Ç¿ÖÆopModeµÄÀàĞÍ£¬·ÀÖ¹·Ç·¨Êı¾İ´«Èë
+     * å¼ºåˆ¶opModeçš„ç±»å‹ï¼Œé˜²æ­¢éæ³•æ•°æ®ä¼ å…¥
      * 
      */
     public BafCommInfo(String busiId, OpMode opMode, BafAuthInfo authInfo) {
@@ -132,15 +132,15 @@ public class BafCommInfo {
 
         TclMsg tclMsg = new TclMsg();
 
-        // ×Ü²ÎÊı
+        // æ€»å‚æ•°
         tclMsg.append("COMM_INFO");
-        // ±ØÑ¡²ÎÊı
+        // å¿…é€‰å‚æ•°
         tclMsg.append("BUSI_CODE", busiId);
         tclMsg.append(authInfo.toTclMsg());
         tclMsg.append("CHANNEL", channel);
         tclMsg.append("OP_MODE", opMode);
 
-        // ¿ÉÑ¡²ÎÊı
+        // å¯é€‰å‚æ•°
         tclMsg.append("BMS_ACCEPT_ID", bmsAcceptId);
         tclMsg.append("BUSI_KEY", busiKey);
         tclMsg.append("REMARK", remark);

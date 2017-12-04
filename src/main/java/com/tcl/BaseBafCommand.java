@@ -55,7 +55,7 @@ public class BaseBafCommand {
     }
 
     /**
-     * ½ö½öÓÃÓÚÄ£ÄâÊı¾İÊ±ºòÅĞ¶Ï¸ÃÈ¡ÄÄÌõÊı¾İ
+     * ä»…ä»…ç”¨äºæ¨¡æ‹Ÿæ•°æ®æ—¶å€™åˆ¤æ–­è¯¥å–å“ªæ¡æ•°æ®
      */
     public String getMockDataKey() {
         String keyName = null;
@@ -117,12 +117,12 @@ public class BaseBafCommand {
     public TclMsg toTclMsg() {
 
         if (commInfo == null) {
-            logger.error("·â×°bafÏûÏ¢Ê±³ö´í£ºcommInfo shouldn't is null!");
+            logger.error("å°è£…bafæ¶ˆæ¯æ—¶å‡ºé”™ï¼šcommInfo shouldn't is null!");
             return null;
         }
 
         if (actionList.size() <= 0) {
-            logger.error("·â×°bafÏûÏ¢Ê±³ö´í£ºaction list should large 0!");
+            logger.error("å°è£…bafæ¶ˆæ¯æ—¶å‡ºé”™ï¼šaction list should large 0!");
         } else if (actionList.size() == 1) {
             return singleBafCommand();
         } else {
