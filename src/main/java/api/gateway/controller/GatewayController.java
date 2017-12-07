@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import api.gateway.common.CommonResponse;
 import api.gateway.enums.BafSubjectEnums;
+import api.gateway.exception.HandlerException;
+import api.gateway.exception.ParametersValidException;
 import api.gateway.handlerinterface.GatewayHandler;
 import api.gateway.util.SpringBeanUtil;
 
@@ -69,8 +71,14 @@ public class GatewayController {
 
 		} catch (final Exception e) {
 			String errorMessage = "API端内部异常，请联系管理员";
-			
+			if (e instanceof ParametersValidException) {
+				errorMessage = ((ParametersValidException) e).getErrorMessage();
+			}else if (e instanceof HandlerException) {
+				errorMessage = ((HandlerException) e).getErrorMessage();
+			}
 			response.setResponseMsg(errorMessage);
+			response.setSuccess(false);
+			response.setResponseCode("1");
 			GatewayController.logger.error(errorMessage, e);
 		}
 		return response;

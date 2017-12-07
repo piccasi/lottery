@@ -9,8 +9,10 @@ import org.apache.log4j.Logger;
 
 
 
+
 import api.gateway.common.CommonResponse;
 import api.gateway.enums.AppChannelEnums;
+import api.gateway.exception.ParametersValidException;
 import api.gateway.util.MD5;
 
 
@@ -44,7 +46,7 @@ public abstract class GatewayAbstractHandler {
 			for (final String param : requireds) {
 				final String paramValue = params.get(param);
 				if (StringUtils.isEmpty(paramValue)) {
-					throw new Exception(String.format("参数[%s]为空", param));
+					throw new ParametersValidException(String.format("参数[%s]为空", param));
 				}
 
 				// 特殊处理时间戳
@@ -52,7 +54,7 @@ public abstract class GatewayAbstractHandler {
 					try {
 						new SimpleDateFormat("yyyyMMddHHmmss").parse(paramValue);
 					} catch (final Exception e) {
-						throw new Exception(String.format("时间戳[%s]格式不合法", param), e);
+						throw new ParametersValidException(String.format("时间戳[%s]格式不合法", param), e);
 					}
 				}
 			}

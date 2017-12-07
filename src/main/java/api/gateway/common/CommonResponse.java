@@ -19,13 +19,8 @@ public class CommonResponse <T> implements Serializable  {
      * 错误信息(自己查看)
      */
     private String responseMsg;
-    /**
-     * 错误信息(展示给客户)
-     */
-    private String responseShowMsg;
-    /**
-     * 返回值
-     */
+   
+   
     private T data;
 
     public boolean isSuccess() {
@@ -60,18 +55,11 @@ public class CommonResponse <T> implements Serializable  {
         this.data = data;
     }
 
-    public String getResponseShowMsg() {
-        return responseShowMsg;
-    }
-
-    public void setResponseShowMsg(String responseShowMsg) {
-        this.responseShowMsg = responseShowMsg;
-    }
-
+    
     @Override
     public String toString() {
         return "CommonResponseData [success=" + success + ", responseCode=" + responseCode + ", responseMsg="
-                + responseMsg + ", responseShowMsg=" + responseShowMsg + ", data=" + data + "]";
+                + responseMsg + ", data=" + data + "]";
     }
 
 }

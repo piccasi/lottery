@@ -40,7 +40,7 @@ public class TestPost {
     NameValuePair[] pairs={pair1,pair2,pair3};
     post.setRequestBody(pairs); 
     post.setParams(p);
-    post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8");
+   // post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8");
 	int statusCode = client.executeMethod(post);
 	
 	if(statusCode != HttpStatus.SC_OK){
