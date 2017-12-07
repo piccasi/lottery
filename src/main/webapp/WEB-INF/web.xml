@@ -7,8 +7,18 @@
 	<!-- Spring和mybatis的配置文件 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-mybatis.xml</param-value>
+		<param-value>classpath:*.xml</param-value>
 	</context-param>
+	
+	<filter>
+   		 <filter-name>httpMethodFilter</filter-name>
+   		 <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+	<filter-mapping>
+    	<filter-name>httpMethodFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	<!-- 编码过滤器 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -23,6 +33,38 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- 解密过滤器  -->  
+<!--     <filter>  
+        <filter-name>EncryptFilter</filter-name>  
+        <filter-class>com.tydic.uniform.common.filter.EncryptFilter</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>EncryptFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping> -->
+	
+	<!-- Define user securityFilter filter	 -->
+<!--     <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>com.tydic.uniform.hh.filter.SecurityFilter</filter-class>
+        <init-param>
+            <param-name>filterUrl</param-name>
+            <param-value>
+            	/,
+               /health/search,
+               /health/analysis,
+               /portal/login
+            </param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> -->
+    
+
+	
 	<!-- Spring监听器 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

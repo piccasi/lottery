@@ -4,20 +4,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Map.Entry;
 
 import org.springframework.stereotype.Service;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
+import cn.online.pojo.BaseSearch;
+
 import com.tcl.ListMapBafVariantsImpl;
 import com.tcl.MapBafVariantsImpl;
 import com.tcl.SelfTest;
 import com.tcl.StandBafVariants;
 import common.ServiceUtil;
-
-import cn.online.pojo.BaseSearch;
-import cn.online.service.Search;
 
 /** 
  * @author  作者 E-mail: 

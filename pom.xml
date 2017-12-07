@@ -7,7 +7,7 @@
   
   
 	<properties>
-		<java_source_version>1.7</java_source_version>
+		<!-- <java_source_version>1.7</java_source_version> -->
 		<java_target_version>1.7</java_target_version>
 		<jetty.version>6.1.9</jetty.version>
 	</properties>
@@ -279,7 +279,7 @@
                     <target>${java_target_version}</target>
                     <compilerArguments>  
         				<verbose />  
-        				<bootclasspath>${java.home}/lib/rt.jar</bootclasspath>
+        				<bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
         				<extdirs>src\main\webapp\WEB-INF\lib</extdirs> 
     				</compilerArguments>
                 </configuration>
