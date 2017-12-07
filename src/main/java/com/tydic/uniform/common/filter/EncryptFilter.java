@@ -33,6 +33,7 @@ public class EncryptFilter implements Filter{
 		uris.add(".ttf");
 		uris.add(".jsp");
 		uris.add(".html");*/
+		uris.add("/portal/login");
 		uris.add("/health/search");
 		uris.add("/health/analysis");
 	}

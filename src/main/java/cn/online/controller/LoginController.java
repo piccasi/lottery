@@ -1,15 +1,16 @@
 package cn.online.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.tydic.uniform.common.vo.resp.JsonResponse;
 import cn.online.pojo.LogonInVo;
+
+import com.tydic.uniform.common.vo.resp.JsonResponse;
+import com.tydic.uniform.hh.constant.HhControllerMappings;
+import com.tydic.uniform.hh.constant.HhUrlsMappings;
 
 /** 
  * @author  作者 E-mail: 
@@ -21,11 +22,11 @@ import cn.online.pojo.LogonInVo;
  */
 
 @Controller
-@RequestMapping(value = "portal")
+@RequestMapping(value = HhControllerMappings.LOGONIN)
 public class LoginController {
 
 
-	@RequestMapping("/login2")
+	@RequestMapping(value = HhUrlsMappings.LOGIN, method = RequestMethod.POST)
 	@ResponseBody
 	//public String loginon(@RequestBody String str){
 	public String loginon(@RequestBody LogonInVo str){
