@@ -11,11 +11,20 @@ import api.gateway.handler.*;
  * @since 1.0.0
  */
 public enum BafSubjectEnums {
-
+   /*
+    * 只要新增枚举就可以实现新增接口
+    * 参照TEST_EXAMPLE TEST_EXAMPLE为BAF调用英文名字 BAF调用英文名字(BAF调用英文名字,BAF中文名字,必须参数名,全部入参包含必须非必须,返回参数名,调用类不需要改)
+    * 需要在末尾加个,
+    * 
+    * 
+    * 
+    */
  
     
  
     Pis_Get_Medical_Info("Pis_Get_Medical_Info","查询药品接口",new String[]{"KEY_WORDS","TYPE"},new String[]{"KEY_WORDS","TYPE"},new String[]{"DRUG_NAME","DRUG_DESC","DRUG_IMG"},CommonHandler.class)
+    ,
+    TEST_EXAMPLE("TEST_EXAMPLE","这个是中文名字",new String[]{"我是必须传","的参数"},new String[]{"我是请求的","参数"},new String[]{"我是返回的","参数"},CommonHandler.class)
     ;
     
     /**
