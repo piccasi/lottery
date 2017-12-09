@@ -104,7 +104,8 @@ public class JsonResponse {
 		ret.put("MSG", "");
 		ret.put("DATA", result == null ? new HashMap<Object, Object>() : result);
 		ret.put("CODE", "");
-		return DesEncryptUtil.encrypt(JSONObject.toJSONString(ret));
+		//return DesEncryptUtil.encrypt(JSONObject.toJSONString(ret));
+		return JSONObject.toJSONString(ret);
 	}
 	
 	/**

@@ -258,12 +258,19 @@ public class MD5Utils {
 		System.out.println(s.equals(ss));
 		
 		//String salt = "YDI83DIUKG2!";
-		String uri = "/hhagentapp/query/agentRes";
-		String timestamp = "1490168632285";
-		String token = "cadc051d3ae84b52b64acebe396487f8";
-		ss = getSign(uri + token + timestamp);
+		String uri = "/profile/view";
+		String token = "345sdfw43";
+		String reqId = "34rth45y45";
+		String version = "1.0";
+		String reqTime = System.currentTimeMillis() + "";
+		System.out.println("reqTime: " + reqTime);
+		//MD5Utils.getSign(uri + token + reqTime + reqId + version);
+		
+		//String timestamp = "1490168632285";
+		//String token = "cadc051d3ae84b52b64acebe396487f8";
+		ss = getSign(uri + token + reqTime + reqId + version);
 		System.out.println(ss);
-		System.out.println(ss.equals("da2224819c89547391e6229e575ca518".toUpperCase()));
+		//System.out.println(ss.equals("da2224819c89547391e6229e575ca518".toUpperCase()));
 		
 	}
 

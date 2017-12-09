@@ -13,6 +13,8 @@ import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 
+import net.sf.json.JSONObject;
+
 import org.apache.log4j.Logger;
 
 import com.tydic.uniform.common.util.DesEncryptUtil;
@@ -27,6 +29,7 @@ public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletReq
 	  private Map<String, String[]> params;  
 	  
 	  private  byte[] body;  
+	  private String HEADER;
 	  public HttpServletRequestWrapper(HttpServletRequest request) throws IOException {  
 	      super(request);   
 	      params = new HashMap<String, String[]>();
@@ -38,26 +41,32 @@ public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletReq
 	  } 
 	  private void initByteBody(HttpServletRequest request) throws IOException{
 		  BufferedReader br = request.getReader();
-		  String json = "",line="";
+		  String json = "",line="", header="";
 		  while ((line = br.readLine()) != null) {
 		         json += line;
 		  }
 		  if(!"".equals(json)){
 			  //String uri = request.getRequestURI();
-				  logger.info("json: " + json);
-			  
+			  logger.info("json: " + json);
+			  /*try {
+				  json = RSAUtil.decryptArray(json);
+			  } catch (Exception e) {
+				  e.printStackTrace();
+			  }*/
+				  
+				  
+				  JSONObject obj = JSONObject.fromObject(json);
+				  header = obj.getString("HEADER");
+				  json = obj.getString("BODY");
 				  //json = DesEncryptUtil.decrypt(json);
-				  try {
-					  json = RSAUtil.decryptArray(json);
-				  } catch (Exception e) {
-					  e.printStackTrace();
-				  }
+				  
 			
 				  logger.info("json: " + json);
 		  }
 		  
 		  //System.out.println("json: " + json);
 		  this.body = json.getBytes("UTF-8");
+		  this.HEADER = header;
 	  }
 	  /**
 	   * 前台的value必须密文传递，不允许明文传递
@@ -190,6 +199,12 @@ public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletReq
 					} 
 	            }  
 	        };  
-	    }  
+	    }
+		public String getHeader() {
+			return HEADER;
+		}
+		public void setHeader(String header) {
+			this.HEADER = header;
+		}  
 	    
 }	

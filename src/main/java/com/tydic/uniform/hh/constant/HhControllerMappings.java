@@ -15,6 +15,8 @@ package com.tydic.uniform.hh.constant;
 public class HhControllerMappings {
 	// 2.11用户登录
 	public static final String LOGONIN = "portal";
+	// 2.11 个人中心
+	public static final String PROFILE = "profile";
 	// 2.5注册
 	public static final String REGISTER = "register";
 	// 2.22修改密码或重置密码
