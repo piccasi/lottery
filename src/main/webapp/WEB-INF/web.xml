@@ -20,7 +20,7 @@
 	</filter-mapping>
 	
 	<!-- 编码过滤器 -->
-	<filter>
+<!-- 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 		<async-supported>true</async-supported>
@@ -32,7 +32,7 @@
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
 	
 	<!-- 解密过滤器  -->  
 <!--     <filter>  
@@ -45,13 +45,12 @@
     </filter-mapping> -->
 	
 	<!-- Define user securityFilter filter	 -->
-<!--     <filter>
+    <filter>
         <filter-name>SecurityFilter</filter-name>
         <filter-class>com.tydic.uniform.hh.filter.SecurityFilter</filter-class>
         <init-param>
             <param-name>filterUrl</param-name>
             <param-value>
-            	/,
                /health/search,
                /health/analysis,
                /portal/login
@@ -61,7 +60,7 @@
     <filter-mapping>
         <filter-name>SecurityFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping> -->
+    </filter-mapping>
     
 
 	
@@ -103,7 +102,8 @@
 	</welcome-file-list>
 	<!-- 配置SESSION超时，单位是分钟 -->
 	<session-config>
-		<session-timeout>15</session-timeout>
+		<!-- <session-timeout>15 * 24 * 60</session-timeout> -->
+		<session-timeout>4</session-timeout>
 	</session-config>
 
 </web-app>

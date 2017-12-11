@@ -215,6 +215,9 @@ public class HhUrlsMappings {
 	// APP原生用户登录
 	public static final String LOGIN = "login";
 	
+	// APP个人资料查询
+	public static final String PROFILEVIEW = "view";
+	
 	// 用户登录是否登录
 	public static final String LOGIN_VALID = "tokenVerify";
 	

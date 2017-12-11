@@ -7,6 +7,22 @@ package com.tydic.uniform.hh.constant;
  *
  */
 public enum CODE{
+	SUCCESS{
+		@Override
+		public int value() {
+			return 0;
+		}
+
+		@Override
+		public String desc() {
+			return "everything goes well";
+		}
+
+		@Override
+		public String getDisplayMsg() {
+			return desc();
+		}
+	},
 	TIMEOUT {
 		@Override
 		public int value() {
@@ -16,6 +32,22 @@ public enum CODE{
 		@Override
 		public String desc() {
 			return "请求超时";
+		}
+
+		@Override
+		public String getDisplayMsg() {
+			return desc();
+		}
+	},
+	REQERR {
+		@Override
+		public int value() {
+			return -13;
+		}
+
+		@Override
+		public String desc() {
+			return "请求非法";
 		}
 
 		@Override

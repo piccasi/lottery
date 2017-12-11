@@ -76,7 +76,7 @@ public class EncryptFilter implements Filter{
         	postFix = true;
         }
         
-        boolean noEncrypt = uri.contains(uri);
+        boolean noEncrypt = uris.contains(uri);
 		
 		//System.out.println(noEncrypt);
 		
