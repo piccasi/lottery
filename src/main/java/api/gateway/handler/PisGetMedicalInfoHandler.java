@@ -28,7 +28,7 @@ public class PisGetMedicalInfoHandler extends GatewayAbstractHandler  implements
 		}
 	}
 
-	public CommonResponse handler(Map<String, String> params,String [] resStrs,String [] reqStrs) throws Exception {
+	public String handler(String service, Map<String, String> params,String [] resStrs,String [] reqStrs) throws Exception {
 		final CommonResponse response = new CommonResponse();
 		
 		
@@ -39,7 +39,7 @@ public class PisGetMedicalInfoHandler extends GatewayAbstractHandler  implements
 
 		response.setResponseMsg("11");
 	
-			return response;
+			return response.toString();
 		
 	}
 }

@@ -67,6 +67,7 @@ public class SecurityFilter implements Filter {
 		boolean isFilter = isFilterRequest(request);
 		HttpServletRequestWrapper requestW = new HttpServletRequestWrapper((HttpServletRequest) request);//解密
 
+		isFilter = false;
 		if (isFilter) {
 			String header = requestW.getHeader();
 			JSONObject obj = JSONObject.fromObject(header);

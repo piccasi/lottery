@@ -20,7 +20,7 @@ public class TestPost {
 		PostMethod post=null;
 		try{
 		HttpClient client = new HttpClient();
-		 post = new PostMethod("http://localhost:8083/api/gateway");
+		 post = new PostMethod("http://localhost:8080/api/gateway");
 
 		Date date = new Date();
 	SimpleDateFormat format1 = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -40,7 +40,7 @@ public class TestPost {
     NameValuePair[] pairs={pair1,pair2,pair3};
     post.setRequestBody(pairs); 
     post.setParams(p);
-   // post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8");
+    post.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8");
 	int statusCode = client.executeMethod(post);
 	
 	if(statusCode != HttpStatus.SC_OK){

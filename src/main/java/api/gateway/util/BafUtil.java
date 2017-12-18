@@ -17,7 +17,7 @@ import com.tcl.TclMsg;
 import common.TradeManager;
 
 public class BafUtil {
-public static List<Map<String,String>> executeBaf(Map<String, String> params,String [] resStrs,String [] reqStrs){
+public static List<Map<String,String>> executeBaf(String service, Map<String, String> params,String [] resStrs,String [] reqStrs){
 	Map<String,String> bafIpAndPortMap=	ControllerUtils.getBafIpAndPort();
 	String ip=bafIpAndPortMap.get("baf.objectFactory.socket.url");
 	String port=bafIpAndPortMap.get("baf.objectFactory.socket.port");
@@ -28,13 +28,14 @@ public static List<Map<String,String>> executeBaf(Map<String, String> params,Str
 	for(int i=0; i<resStrs.length;i++){
 		bafVariants.addParameter(resStrs[i], params.get(resStrs[i]));
 	}
-	manager.addAction(params.get("SUBJECT"), bafVariants) ;
+	//manager.addAction(params.get("SUBJECT"), bafVariants);
+	manager.addAction(service, bafVariants) ;
 	SocketTradeAction.setBAF_IP(ip);
 	SocketTradeAction.setBAF_PORT(Integer.valueOf(port));
 	String bafTcl=manager.getTclStr();
 	String ret = SocketTradeAction.executeBaf(bafTcl);
 	StandBafVariants result = MapBafVariantsImpl.getInstance(ret);
-	ret = result.getParameter("RESULT");
+	ret = result.getParameter("ROBOT_OUTPUT");
 	List<Map<String,String>> bafRetList=getBafResult(ret,reqStrs);
 	return bafRetList;
 }

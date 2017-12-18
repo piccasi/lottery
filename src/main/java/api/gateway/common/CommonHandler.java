@@ -8,6 +8,8 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.tydic.uniform.common.vo.resp.JsonResponse;
+
 import api.gateway.base.GatewayAbstractHandler;
 import api.gateway.exception.HandlerException;
 import api.gateway.exception.ParametersValidException;
@@ -28,16 +30,18 @@ public class CommonHandler extends GatewayAbstractHandler  implements GatewayHan
 		
 	}
 	@Override
-	public CommonResponse handler(Map<String, String> params,String [] resStrs,String [] reqStrs) throws Exception {
-		final CommonResponse response = new CommonResponse();
+	public String handler(String service, Map<String, String> params,String [] resStrs,String [] reqStrs) throws Exception {
+		//final CommonResponse response = new CommonResponse();
+		List<Map<String,String>> bafList;
         try{
-		List<Map<String,String>> bafList=BafUtil.executeBaf(params, resStrs, reqStrs);
+        	bafList=BafUtil.executeBaf(service, params, resStrs, reqStrs);
 		
-		response.setData(bafList);
+		//response.setData(bafList);
         }catch (final Exception e) {
 			throw new HandlerException(e.getMessage());
 		}
-		return response;
+		//return response;
+        return JsonResponse.toSuccessResult(bafList);
 		
 	}
 

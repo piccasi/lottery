@@ -46,19 +46,19 @@ public class GatewayController {
 	
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
-	public CommonResponse handler(HttpServletRequest request) {
+	public String handler(HttpServletRequest request) {
 		final CommonResponse response = new CommonResponse();
 		try {
 			final String subject = request.getParameter("SUBJECT");
 			if (StringUtils.isEmpty(subject)) {
 				response.setResponseMsg("主题[SUBJECT]为空");
-				return response;
+				return response.toString();
 			}
 
 			final BafSubjectEnums subjectEnum = BafSubjectEnums.typeOf(subject);
 			if (subjectEnum == null) {
 				response.setResponseMsg("主题[SUBJECT]不存在");
-				return response;
+				return response.toString();
 			}
 			final GatewayHandler handler = (GatewayHandler) SpringBeanUtil.getBean(subjectEnum.getClassz());
 			final Map<String, String> params = this.getParamMap(request);
@@ -67,7 +67,7 @@ public class GatewayController {
 
 			/*handler.checkSign(subjectEnum.getSigns(), params);*/ //不需要验证签名
 
-			return handler.handler(this.getParamMap(request),subjectEnum.getResStrs(),subjectEnum.getReqStrs());
+			return handler.handler(subjectEnum.getType(),this.getParamMap(request),subjectEnum.getResStrs(),subjectEnum.getReqStrs());
 
 		} catch (final Exception e) {
 			String errorMessage = "API端内部异常，请联系管理员";
@@ -81,7 +81,7 @@ public class GatewayController {
 			response.setResponseCode("1");
 			GatewayController.logger.error(errorMessage, e);
 		}
-		return response;
+		return response.toString();
 
 	}
 

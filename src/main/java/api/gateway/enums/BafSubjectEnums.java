@@ -22,8 +22,18 @@ public enum BafSubjectEnums {
  
     
  
-    Pis_Get_Medical_Info("Pis_Get_Medical_Info","查询药品接口",new String[]{"KEY_WORDS","TYPE"},new String[]{"KEY_WORDS","TYPE"},new String[]{"DRUG_NAME","DRUG_DESC","DRUG_IMG"},CommonHandler.class)
-    ,
+    Pis_Get_Medical_Info("Pis_Get_Medical_Info",
+    		"查询药品接口",
+    		new String[]{"KEY_WORDS","TYPE"},
+    		new String[]{"KEY_WORDS","TYPE"},
+    		new String[]{"DRUG_NAME","DRUG_DESC","DRUG_IMG"},
+    		CommonHandler.class),
+    Ssbon_Location_WX("Ssbon_Location_WX",
+    	    		"地理位置同步",
+    	    		new String[]{"LOC_X","LOC_Y"},
+    	    		new String[]{"XW_OPENID","LOC_X","LOC_Y","USER_ADDR","CITY"},
+    	    		new String[]{"ROBOT_OUTPUT"},
+    	    		CommonHandler.class),
     TEST_EXAMPLE("TEST_EXAMPLE","这个是中文名字",new String[]{"我是必须传","的参数"},new String[]{"我是请求的","参数"},new String[]{"我是返回的","参数"},CommonHandler.class)
     ;
     

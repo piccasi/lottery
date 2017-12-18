@@ -3,6 +3,7 @@ package com.tydic.uniform.common.filter;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -27,24 +28,61 @@ import com.tydic.uniform.common.util.RSAUtil;
 public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletRequestWrapper{
 	  private static Logger logger = Logger.getLogger(HttpServletRequestWrapper.class);
 	  private Map<String, String[]> params;  
+	  private static final int BUFFER_START_POSITION = 0;
+	  private static final int CHAR_BUFFER_LENGTH = 1024;
 	  
 	  private  byte[] body;  
 	  private String HEADER;
 	  public HttpServletRequestWrapper(HttpServletRequest request) throws IOException {  
 	      super(request);   
-	      params = new HashMap<String, String[]>();
+	      params = request.getParameterMap();//new HashMap<String, String[]>();
+	      //this.
 
 		  this.initByteBody(request);
 
 	      //this.params.putAll(dealParameterMap(request.getParameterMap()));  //url后面的参数和post提交的表单参数暂时不加密，只为H5页面能正常访问pdf
 	     
 	  } 
+	  
+	  public String RepeatedlyReadRequestWrapper(HttpServletRequest request) {
+	        //super(request);
+
+	        StringBuilder stringBuilder = new StringBuilder();
+
+	        InputStream inputStream = null;
+	        try {
+	            inputStream = request.getInputStream();
+	        } catch (IOException e) {
+	        	logger.error("Error reading the request body…", e);
+	        }
+	        if (inputStream != null) {
+	            try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
+	                char[] charBuffer = new char[CHAR_BUFFER_LENGTH];
+	                int bytesRead;
+	                while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
+	                    stringBuilder.append(charBuffer, BUFFER_START_POSITION, bytesRead);
+	                }
+	            } catch (IOException e) {
+	            	logger.error("Fail to read input stream",e);
+	            }
+	        } else {
+	            stringBuilder.append("");
+	        }
+	        String body = stringBuilder.toString();
+	        return body;
+	    }
+	  
 	  private void initByteBody(HttpServletRequest request) throws IOException{
-		  BufferedReader br = request.getReader();
+		  /*BufferedReader br = request.getReader();
 		  String json = "",line="", header="";
 		  while ((line = br.readLine()) != null) {
 		         json += line;
-		  }
+		  }*/
+		  
+		  String json = "",line="", header="";
+		  json = RepeatedlyReadRequestWrapper(request);
+		  //json = DesEncryptUtil.decrypt(json);
+		  
 		  if(!"".equals(json)){
 			  //String uri = request.getRequestURI();
 			  logger.info("json: " + json);
@@ -57,7 +95,7 @@ public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletReq
 				  
 				  JSONObject obj = JSONObject.fromObject(json);
 				  header = obj.getString("HEADER");
-				  json = obj.getString("BODY");
+				  //json = obj.getString("BODY");
 				  //json = DesEncryptUtil.decrypt(json);
 				  
 			
@@ -89,6 +127,23 @@ public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletReq
 		 }  
 		 return tParams;
 	  }
+	  
+/*	  private Map<String, String> getParameterMap(HttpServletRequest request){	
+		  Map<String, String> tParams = new HashMap<String, String>();
+		 for (String key : request.getParameterMap()) { 
+			 String[] tempVals = params.get(key);
+			 for(int i=0; tempVals != null&& i < tempVals.length; i++){
+				 System.out.println("解密前:"+tempVals[i]);
+				 tempVals[i] = DesEncryptUtil.decrypt(tempVals[i]);
+				 System.out.println("解密后:"+tempVals[i]);
+			 }
+			 System.out.println("解密前的:" + key);
+			 String tempKey = DesEncryptUtil.decrypt(key);
+			 System.out.println("解密后的:" + tempKey);
+			 tParams.put(tempKey, tempVals);
+		 }  
+		 return tParams;
+	  }*/
 	  
 	  @Override  
 	  public String getParameter(String name) {  

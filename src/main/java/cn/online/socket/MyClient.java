@@ -19,8 +19,8 @@ import java.net.Socket;
 public class MyClient {  
     private static final int SERVER_PORT = 7979;
 	static Socket server; 
-    //static String IP ="120.77.44.145";
-    static String IP ="127.0.0.1";
+    static String IP ="120.77.44.145";
+    //static String IP ="127.0.0.1";
   
     public static void main(String[] args) throws Exception {  
 /*        server = new Socket();
