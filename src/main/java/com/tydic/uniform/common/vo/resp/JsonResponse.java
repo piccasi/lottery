@@ -105,6 +105,7 @@ public class JsonResponse {
 		ret.put("DATA", result == null ? new HashMap<Object, Object>() : result);
 		ret.put("CODE", "");
 		//return DesEncryptUtil.encrypt(JSONObject.toJSONString(ret));
+		String ssString = JSONObject.toJSONString(ret);
 		return JSONObject.toJSONString(ret);
 	}
 	
@@ -120,7 +121,9 @@ public class JsonResponse {
 		ret.put("MSG", StringUtil.isNullOrBlank(errMsg) ? code.getDisplayMsg() : errMsg);
 		ret.put("DATA", new HashMap<Object, Object>(1));
 		ret.put("CODE", String.valueOf(code.value()));
-		return DesEncryptUtil.encrypt(JSONObject.toJSONString(ret));
+		//return DesEncryptUtil.encrypt(JSONObject.toJSONString(ret));
+		String ssString = JSONObject.toJSONString(ret);
+		return JSONObject.toJSONString(ret);
 	}
 	
 	

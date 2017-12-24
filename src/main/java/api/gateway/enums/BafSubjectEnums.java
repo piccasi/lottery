@@ -34,6 +34,12 @@ public enum BafSubjectEnums {
     	    		new String[]{"XW_OPENID","LOC_X","LOC_Y","USER_ADDR","CITY"},
     	    		new String[]{"ROBOT_OUTPUT"},
     	    		CommonHandler.class),
+    Pis_User_New("Pis_User_New",
+    		"用户注册",
+    		new String[]{"USER_NAME","PASSWD","TYPE"},
+    		new String[]{"XW_OPENID","USER_NAME","PASSWD","TYPE"},
+    		new String[]{"ROBOT_OUTPUT"},
+    		CommonHandler.class),
     TEST_EXAMPLE("TEST_EXAMPLE","这个是中文名字",new String[]{"我是必须传","的参数"},new String[]{"我是请求的","参数"},new String[]{"我是返回的","参数"},CommonHandler.class)
     ;
     

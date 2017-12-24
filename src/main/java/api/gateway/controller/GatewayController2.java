@@ -68,7 +68,7 @@ public class GatewayController2 {
 			final BafSubjectEnums subjectEnum = BafSubjectEnums.typeOf(subject);
 			if (subjectEnum == null) {
 				//response.setResponseMsg("服务[SERVICE]不存在");
-				return JsonResponse.toErrorResult(CODE.PARAMETER_ERROR, "服务[SERVICE]不存在");
+				return JsonResponse.toErrorResult(CODE.PARAMETER_ERROR, "服务不存在");
 			}
 			final GatewayHandler handler = (GatewayHandler) SpringBeanUtil.getBean(subjectEnum.getClassz());
 			final Map<String, String> params = this.getParamMap(obj.getJSONObject("BODY"));
