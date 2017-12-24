@@ -18,11 +18,11 @@
 	<mvc:view-controller path="/" view-name="index" />
 	
 		<!-- 解决ajax和spring mvc乱码问题 -->
-	<!-- <mvc:annotation-driven>   
+	<mvc:annotation-driven>   
     	<mvc:message-converters register-defaults="true">   
         	<bean class="com.tydic.uniform.hh.util.UTF8StringHttpMessageConverter"/>   
     	</mvc:message-converters>   
-	</mvc:annotation-driven> -->
+	</mvc:annotation-driven>
 	<!-- 静态资源 -->
 	<mvc:annotation-driven /> 
 	<mvc:resources location="/image/" mapping="/image/**"/>
