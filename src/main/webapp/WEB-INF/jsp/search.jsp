@@ -32,7 +32,7 @@ s_ipt_wr {
 	                 <img src="image/ht-logo.png"/>
 	                 </a> --> <a href="/"
 					class="ht-image -image-logo pull-left"><img
-						src="http://localhost:8080/image/dolphin48x48.png" alt="logo"></a>
+						src="/image/dolphin48x48.png" alt="logo"></a>
 				</td>
 				<td><input name="type" id="type" type="hidden" value="${type}" /></td>
 				<td><input style="width: 539px; height: 30px; font-size: 16px"
