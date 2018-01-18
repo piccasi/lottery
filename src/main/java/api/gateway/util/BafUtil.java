@@ -22,7 +22,7 @@ public static List<Map<String,String>> executeBaf(String service, Map<String, St
 	String ip=bafIpAndPortMap.get("baf.objectFactory.socket.url");
 	String port=bafIpAndPortMap.get("baf.objectFactory.socket.port");
 	CommonResult commonResult = new CommonResult();
-	TradeManager manager = new TradeManager("10011", OpMode.ROLLBACK,new BafAuthInfo("A","A00","22342","43643"), commonResult,null,null);
+	TradeManager manager = new TradeManager("10011", OpMode.SUBMIT,new BafAuthInfo("A","A00","22342","43643"), commonResult,null,null);
 	manager.removeAllAction();
 	ListBafVariantsImpl bafVariants = new ListBafVariantsImpl();
 	for(int i=0; i<resStrs.length;i++){
@@ -36,6 +36,9 @@ public static List<Map<String,String>> executeBaf(String service, Map<String, St
 	String ret = SocketTradeAction.executeBaf(bafTcl);
 	StandBafVariants result = MapBafVariantsImpl.getInstance(ret);
 	ret = result.getParameter("ROBOT_OUTPUT");
+	if("".equals(ret)){
+		ret=result.toTclString();
+	}
 	List<Map<String,String>> bafRetList=getBafResult(ret,reqStrs);
 	return bafRetList;
 }
@@ -46,14 +49,17 @@ public static List<Map<String,String>> getBafResult(String str,String[] reqStrs)
 		int msgLength = tclmsg.getLength();
 		for (int i = 0; i < msgLength; i++) {
 			Map map = new HashMap();
-			
+			  
 			TclMsg tclMsgs = tclmsg.getTclMsg(i);
-			String TclMsgStr = tclMsgs.toTclStr();
-			System.out.println("TclMsgStr: " + TclMsgStr);
+			String name=tclMsgs.getTclMsg(0).toTclStr();
+			String value=tclMsgs.getTclMsg(1).toTclStr();
 			for(int j=0;j<reqStrs.length;j++){
-				map.put(reqStrs[j], MapBafVariantsImpl.getInstance(TclMsgStr).getParameter(reqStrs[j]));
+				if(name.equals(reqStrs[j])){
+					map.put(name, value);
+					list.add(map);
+				}
 			}
-			list.add(map);
+		
 		}
 	}
 	return list;
