@@ -20,8 +20,6 @@ import api.gateway.exception.ParametersValidException;
 import api.gateway.handlerinterface.GatewayHandler;
 import api.gateway.util.SpringBeanUtil;
 
-import com.tcl.CommonResult;
-
 
 /**
  * API接口入口

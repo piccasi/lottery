@@ -75,6 +75,12 @@ public enum BafSubjectEnums {
     		new String[]{"我是必须传","的参数"},
     		new String[]{"我是请求的","参数"},
     		new String[]{"我是返回的","参数"},
+    		CommonHandler.class),
+	TEST_GATEWAY("TEST_GATEWAY",
+    		"测试",
+    		new String[]{"name"},
+    		new String[]{"name","age"},
+   	        new String[]{"RET_CODE","RET_MSG","RESULT_INFO","CUSTOMER_ID"},
     		CommonHandler.class)
     ;
     
